@@ -1,0 +1,28 @@
+1.  MyBatis的核心组件分为4个部分：
+    SqlSessionFactoryBuilder(构造器):它会根据配置或者代码来生成SqlSessionFactory,采用的是分步构建的Builder模式.
+    SqlSessionFactory(工厂接口):依靠它来生成SqlSession,使用的是工厂模式.
+    SqlSession(会话):一个既可以发送SQL执行返回结果,也可以获取Mapper的接口.在现有的技术中,一般我们会让其在业务逻辑代码中“消失”,而使用的是
+                        MyBatis提供的SQLMapper接口编程技术,它能提高代码的可读性和可维护性.
+    SQLMapper(映射器):MyBatis新设计存在的组件,它由一个Java接口和XML文件(或注解)构成,需要给出对应的SQL和映射规则.它负责发送SQL去执行,并返回结果.
+    注意:无论是映射器还是SqlSession都可以发送SQL到数据库执行;
+
+2.  在MyBatis中,SqlSession是其核心接口.在MyBatis中有两个实现类,DefaultSqlSession和SqlSessionManager.
+    DefaultSqlSession是单线程使用的,而SqlSessionManager在多线程环境下使用。
+
+3.  映射器的主要作用就是将SQL查询到的结果映射为一个POJO,或者将POJO的数据插入到数据库中,并定义一些关于缓存等的重要内容。
+
+4.  也许你会觉得使用注解的方式比XML方式要简单得多.如果它和XML方式同时定义时,XML方式将覆盖掉注解方式,所以MyBatis官方推荐使用的是XML方式.
+
+5.  SqlSessionFactoryBuilder的作用在于创建SqlSessionFactory.创建成功后,SqlSessionFactoryBuilder就失去了作用，
+    所以它只能存在于创建SqlSessionFactory的方法中,而不要让其长期存在.
+    
+    SqlSessionFactory可以被认为是一个数据库连接池,它的作用是创建SqlSession接口对象.因此在一般的应用中我们往往希望SqlSessionFactory作为一个单例,
+    让它在应用中被共享。
+
+6.  需要注意的是,MyBatis配置项的顺序不能颠倒.如果颠倒了它们的顺序,那么在MyBatis启动阶段就会发生异常,导致程序无法运行.
+
+7.  JDBC中的Statement对象在执行插入的SQL后,可以通过getGeneratedKeys方法获得数据库生成的主键(需要数据库驱动支持),这样便能达到获取主键的功能.
+
+8.  所以当级联的层级超过3层时,就不要考虑使用级联了,因为这样会造成多个对象的关联,导致系统的精合、复杂和难以维护.
+
+9.  MyBatis没有多对多级联,因为多对多级联比较复杂,使用困难,而且可以通过两个一对多级联进行替换,所以MyBatis不支持多对多级联了.

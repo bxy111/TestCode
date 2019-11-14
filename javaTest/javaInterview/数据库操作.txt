@@ -1,0 +1,70 @@
+1. 创建表
+    CREATE TABLE hero (
+      id int(11) AUTO_INCREMENT,
+      name varchar(30) ,
+      hp float ,
+      damage int(11) ,
+      PRIMARY KEY (id)
+    )  DEFAULT CHARSET=utf8;
+    
+    删除表
+    DROP TABLE test;
+    drop table if exists 表名;
+
+2. 插入数据
+    insert into hero values (null, '盖伦', 616, 100)
+
+3. 查询数据
+    a. 查询所有数据
+        select * from hero
+    b. 统计表中有多少条数据
+        select count(*) from hero
+    c. 分页查询
+        select * from hero limit 0,5
+
+4. 修改数据
+    update hero set hp = 818 where id = 1
+
+5. 删除数据
+    delete from hero where id = 1
+    
+6. 查询版本
+    select version();
+
+7. 直接创建数据库
+        create database db1;                                               
+    判断是否存在，如果不存在则创建数据库 db2
+        create database if not exists db2;
+    创建数据库并指定字符集为 gbk
+        create database db3 default character set gbk;
+
+8. 查看数据库
+    查看所有存在的数据库：
+        show databases;
+    查看某个数据库的创建信息：
+        show create database 数据库名;
+
+9. 删除指定数据库：
+    drop database 数据库名;
+
+10. 查看正在使用的数据库:
+        select database();
+    使用/切换数据库：
+        use 数据库名;
+
+11. 查看数据库中的所有表：
+        show tables;
+    查看表结构：
+        desc 表名;
+    查看创建表的SQL语句：
+        show create table 表名;
+
+12. 快速创建一个表结构相同的表
+        create table 新表名 like 旧表名;
+
+
+
+
+
+
+        
