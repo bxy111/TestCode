@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function load(){
+            alert("加载了。。");
+        }
+        function unload(){
+            alert("卸载了。。");
+        }
+        function oc(){
+            alert("改变了。。");
+        }
+        function os(){
+            alert("选取了。。");
+        }
+        function osubmit(){
+            alert("提交了。。");
+        }
+    </script>
+</head>
+<!-- <body onload="load()" onunload="unload()"> -->
+<body>
+    <form action="" onsubmit="osubmit()">
+        姓名：<input type="text" onchange="oc()" onselect="os()">
+        <br><br>
+        <input type="submit" value="提交">
+        <input type="reset" name="" id="" value="重置">
+        <input type="button" value="普通按钮">
+    </form>
+</body>
+</html>

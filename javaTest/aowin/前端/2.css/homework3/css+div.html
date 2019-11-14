@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSSdiv</title>
+    <style>
+        body{
+            background-color: #DDE7DE;
+            width: 1200px;
+            height: 800px;
+            margin: auto;
+            border: 1px solid #DDE7DE;
+        }
+
+        #d1{
+            width: 100%;
+            height: 10%;
+            /* border: 1px solid black; */
+        }
+        .d1-left{
+            width:20%;
+            height: 60%;
+            float: left;
+            font-size: 20px;
+            color: #F7FEF7;
+            text-align:center;
+            margin-top: 10px;
+            /* border: 1px solid black; */
+        }
+        .d1-left-1{
+            width:80%;
+            height: 50%;
+            font-size: 20px;    
+            color: #F7FEF7;
+            text-align:center;
+            margin-top: 5px;
+            /* border: 1px solid black; */
+        }
+        .d1-left-2{
+            width:80%;
+            height: 40%;
+            font-size: 10px;
+            color: #7299A3;
+            text-align:center;
+            margin-bottom:5px;
+            /* border: 1px solid black; */
+        }
+        .d1-right{
+            width:40%;
+            height:70%;
+            float:right;
+            /* border: 1px solid black; */
+        }
+        .d1-right a{
+            color:white;
+            font-size: 10px;
+            text-decoration-line: none;
+            background-color: #5AB2CF;
+            display: block;
+            float: left;
+            margin-top: 35px;
+            margin-right: 10px;
+            padding-top: 3px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #d2{
+            background-color: #FFFFFF;
+            width: 25%;
+            height: 89%;
+            margin-left: 7px;
+            float:left;
+            border: 1px solid #DDE7DE;
+        }
+        .d2-one{
+            width:80%;
+            height: 20%;
+            margin-left: 10px;
+            font-size: small;
+            /* border: 1px solid black; */
+        }
+        .d2-one span{
+            color: #82ACB1;
+        }
+        .d2-two{
+            width: 80%;
+            height: 24%;
+            margin-left: 10px;
+            text-align: right;
+            /* border: 1px solid black; */
+        }
+        .d2-three{
+            width: 90%;
+            height: 18%;
+            margin-left: 10px;
+            font-size: small;
+            /* border: 1px solid black; */
+        }
+        .d2-three-top{
+            width: 100%;
+            height:25%;
+            float: left;
+            margin-left: 10px;
+            /* border: 1px solid black; */
+        }
+        .d2-three-top-left{
+            width: 45%;
+            height:100%;
+            float: left;
+            /* border: 1px solid black; */
+        }
+        .d2-three-top-right{
+            width: 50%;
+            height:100%;
+            float: left;
+            /* border: 1px solid black; */
+        }
+        .d2-three-top-right a{
+            color:black;
+            font-size: 10px;
+            text-decoration-line: none;
+            background-color: #DDDDDD;
+            display: block;
+            float: left;
+            padding-top: 3px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .d2-three-bottom{
+            width: 100%;
+            height:25%;
+            float: left;
+            margin-left: 10px;
+            /* border: 1px solid black; */
+        }
+        .d2-three-bottom-left{
+            width: 45%;
+            height:100%;
+            float: left;
+            /* border: 1px solid black; */
+        }
+        .d2-three-bottom-right{
+            width: 50%;
+            height:100%;
+            float: left;
+            /* border: 1px solid black; */
+        }
+        .d2-three-bottom-right a{
+            color:black;
+            font-size: 10px;
+            text-decoration-line: none;
+            background-color: #DDDDDD;
+            display: block;
+            float: left;
+            padding-top: 3px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .d2-four{
+            width: 80%;
+            height: 35%;
+            margin-left: 10px;
+            font-size: small;
+            /* border: 1px solid black; */
+        }
+        .d2-four a{
+            color:#57919C;
+            text-decoration-line: none;
+        }
+        #d3{
+            background-color:#FFFFFF;
+            width:73%;
+            height: 89%;
+            float:right;
+            margin-right: 5px;
+            /* border: 1px solid #DDE7DE; */
+        }
+        .d3-top{
+            text-align: right; 
+            font-size: small;
+            width:90%;
+            height: 5%;
+            color: #A4A4A4; 
+            margin-top: 10px;
+            /* border: 1px solid #DDE7DE; */
+            margin-left: 40px;
+            padding-top: 15px;
+        }
+        .d3-second{
+            color: #4D92A1;
+            text-align: left;
+            width:90%;
+            height: 3%;
+            /* border: 1px solid #DDE7DE; */
+            margin-left: 40px;
+            padding-top: 0px;
+        }
+        .d3-third{
+            text-align: left;
+            font-size: small;
+            color: #595959;
+            width:90%;
+            height: 20%;
+            /* border: 1px solid #DDE7DE; */
+            margin-left: 40px;
+            padding-top: 0px;
+        }
+        .d3-four{
+            text-align: left;
+            font-size: small;
+            color: #595959;
+            width:87%;
+            height: 8%;
+            margin-left: 60px;
+            margin-top: 15px;
+            padding-top: 15px;
+            padding-left: 10px;
+            border: 2px solid #E7E7E7;
+        }
+        .d3-five{
+            text-align: left;
+            font-size: small;
+            color: #595959;
+            width:95%;
+            height: 40%;
+            /* border: 1px solid #DDE7DE; */
+            margin-left: 40px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div class="d1-left">
+            <div class="d1-left-1">
+                沫雨的前端世界
+            </div>
+            <div class="d1-left-2">
+                不浮躁，不安逸。
+            </div>
+        </div>
+        <div class="d1-right" >
+            <a href="">博客园</a>
+            <a href="">首页</a>
+            <a href="">博问</a>
+            <a href="">闪存</a>
+            <a href="">新随笔</a>
+            <a href="">联系</a>
+            <a href="">订阅</a>
+            <a href="">管理</a>
+        </div>
+    </div>
+    <div id="d2">
+        <div class="d2-one">
+            <h4>公告</h4>
+            &nbsp;&nbsp;昵称：<span>沫雨</span><br>
+            &nbsp;&nbsp;园龄：<span>5年1个月</span><br>
+            &nbsp;&nbsp;粉丝：<span>301</span><br>
+            &nbsp;&nbsp;关注：<span>20</span><br>
+            &nbsp;&nbsp;<span>+加关注</span><br>
+        </div>
+        <div class="d2-two">
+            <img src="1.jpg" alt="图片">
+        </div>
+        <div class="d2-three">
+            <h4>搜索</h4>
+            <div class="d2-three-top">
+                <div class="d2-three-top-left">
+                    <input type="text" size="11"/>
+                </div>
+                <div class="d2-three-top-right">
+                    <a href="">找找看</a>
+                </div>
+            </div>
+            <div class="d2-three-bottom">
+                    <div class="d2-three-bottom-left">
+                        <input type="text" size="11"/>
+                    </div>
+                    <div class="d2-three-bottom-right">
+                        <a href="">谷歌搜索</a>
+                    </div>
+                </div>
+        </div>
+        <div class="d2-four">
+            <h4>常用链接</h4>
+            &nbsp;&nbsp;<a href="">我的随笔</a><br><br>
+            &nbsp;&nbsp;<a href="">我的评论</a><br><br>
+            &nbsp;&nbsp;<a href="">我的参与</a><br><br>
+            &nbsp;&nbsp;<a href="">最新评论</a><br><br>
+        </div>
+    </div>
+    <div id="d3">
+        <div class="d3-top">
+            随笔-130&nbsp;&nbsp;文章-0&nbsp;&nbsp;评论-175
+        </div>
+        <div class="d3-second">
+            <b>CSS中font-family的中文字体</b>
+        </div>
+        <hr width="90%" align="center" color="#E7E7E7">
+        <div class="d3-third">
+            说到CSS中的font-family，相信很多朋友经常用，但不知道当你遇到引用中文字体的时候你会怎么写？<br>
+            最近特别关注了下，发现最常用的基本有三种类型：<br>
+            <ol>
+                <li>
+                    1、直接中文
+                </li>
+                <li>
+                    2、英文形式
+                </li>
+                <li>
+                    3、unicode码
+                </li>
+            </ol>
+            前面两种形式很好理解，unicode码是什么意思呢？下面看基本定义：
+        </div>
+        <div class="d3-four">
+                Unicode(统一码、万国码、单一码)是一种在计算机上使用的字符编码。它为每种语言中的每个字符设定了统一并且唯一的二进制<br>
+                编码，以满足跨语言、跨平台进行文本转换、处理的要求。
+        </div>
+        <div class="d3-five">
+            更多内容请查看百度百科对Unicode的介绍。<br>
+            介绍完方案，再谈下使用。之前在看玉伯写的一篇文章《中文字体在CSS中的写法》中提到：font-family中用到的宋体，“用unicode表<br/>
+            示，不用SimSun，是因为Firefox的某些版本和Opera不支持Simsun的写法”。我在网上搜索了下相关内容，大多都是摘抄这篇文章，并<br/>
+            没有提到具体哪个版本的Firefox和Opera会不支持英文的写法。<br><br>
+            对比下，三种方法各有优缺点：中问形式的方便记忆，但不支持中文的系统或者编码的页面则无法正常显示；英文形式的兼容了系统和编码<br/>
+            的问题，但不方便记忆，又可能有潜在的风险；unicode码兼容行最好，但也存在记忆难的问题。<br><br>
+            综合权衡下，在性能和安全第一的条件下，还是推荐使用unicode码。如果不是太严格的情况下，可以选择其他两种。<br><br>
+            下面整理下常用的各种字体的不同显示形式，方便使用的时候查找：<br>
+        </div>
+    </div>
+</body>
+</html>

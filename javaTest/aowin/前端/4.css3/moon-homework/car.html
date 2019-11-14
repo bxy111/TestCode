@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* .main{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        } */
+        .car{
+            width: 200px;
+            height: 100px;
+            background-color: #FFA500;
+            border-radius: 100px 100px 0 0;
+            transition: transform 3s;
+            border: 1px solid black;
+        }
+        .car:hover{
+            transform: translate(500px,0);
+        }
+        .left-wheel1{
+            width: 30px;
+            height: 30px;
+            float: left;
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 15px;
+            background-color: #CCCCCC;
+            border-radius: 15px;
+            border: 1px solid black;
+            transition: transform 3s;
+        }
+        .left-wheel1:hover{
+            transform: rotate(1440deg);
+        }
+        .right-wheel2{
+            width: 30px;
+            height: 30px;
+            float: right;
+            margin-top: 80px;
+            margin-right: 15px;
+            background-color: #CCCCCC;
+            text-align: center;
+            border-radius: 15px;
+            transition: transform 3s;
+            border: 1px solid black;
+        }
+        .right-wheel2:hover{
+            transform: rotate(1440deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <div class="left-wheel1">
+            A
+        </div>
+        <div class="right-wheel2">
+            A
+        </div>
+    </div>
+</body>
+</html>

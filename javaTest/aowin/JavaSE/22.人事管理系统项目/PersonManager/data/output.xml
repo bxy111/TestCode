@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user>
+        <id>3</id>
+        <name>ming</name>
+        <sex>女</sex>
+        <age>23</age>
+        <department>研发部</department>
+        <salary>10000</salary>
+    </user>
+    <user>
+        <id>6</id>
+        <name>limin</name>
+        <sex>男</sex>
+        <age>19</age>
+        <department>人事部</department>
+        <salary>8000</salary>
+    </user>
+    <user>
+        <id>8</id>
+        <name>xiaoxiao</name>
+        <sex>女</sex>
+        <age>25</age>
+        <department>人事部</department>
+        <salary>9000</salary>
+    </user>
+    <user>
+        <id>10</id>
+        <name>liting</name>
+        <sex>女</sex>
+        <age>30</age>
+        <department>研发部</department>
+        <salary>12000</salary>
+    </user>
+    <user>
+        <id>1112</id>
+        <name>zhangjing</name>
+        <sex>男</sex>
+        <age>29</age>
+        <department>后勤部</department>
+        <salary>fsdafsa</salary>
+    </user>
+</users>

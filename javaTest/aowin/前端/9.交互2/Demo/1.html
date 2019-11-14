@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="A">
+        6
+    </div>
+</body>
+<script>
+    function countDown(){
+        var div = document.getElementById("A");
+        setTimeout("countDown()", 1000);
+        var num = div.innerHTML;
+        if (num <= 0){
+            location.href="22.html";
+        }else{
+            div.innerHTML = num -1;
+        }
+    }
+    countDown();
+</script>
+</html>

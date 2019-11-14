@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function baiduClick(){
+            alert("You have clicked the link!");
+        }
+        function bodyLoad(){
+            alert("页面被加载到浏览器中。");
+        }
+        function keyPress(){
+            alert("正在通过键盘输入内容。。。");    
+        }
+        function mouseOver(){
+            alert("鼠标悬停在文字上。");
+        }
+        function Select(){
+            alert("正在选择");
+        }
+        function formSubmit(){
+            alert("表格已提交");
+        }
+        var c = 0;
+        var t = 0;
+        function startCount(){
+            alert(c);
+            c++;
+            t = window.setTimeout("startCount()", 1000);
+        }
+        function stopCount(){
+            window.clearTimeout(t);
+        }
+        // var date = new Date();
+        // console.log(date)
+
+        function getInfo(){
+            console.log(navigator.appCodeName);
+            console.log(navigator.appVersion);
+            console.log(navigator.appName);
+            console.log(navigator.cookieEnabled);
+            console.log(navigator.platform);
+            console.log(navigator.userAgent);
+            console.log(navigator.language);
+        }
+    </script>
+</head>
+<!-- <body onload="bodyLoad()"> -->
+<body>
+    <!-- <a href="https://www.baidu.com" onclick="baiduClick()">去百度</a>
+    <form>
+        请输入姓名<input type="text" name="username" onkeypress="keyPress()"/>
+    </form>
+    <p onmouseover="mouseOver()">
+        请把鼠标放在这里。
+    </p>
+    <form action="" onsubmit="formSubmit()">
+        <input type="submit" value="提交">
+        <select name="city" id="">
+                <option value="beijing">北京</option>
+                <option value="hangzhou">杭州</option>
+                <option value="shanghai">上海</option>
+            </select>
+        <input type="checkbox" name="hobby" value="eat"/>吃饭
+        <input type="checkbox" name="hobby" value="shuijiao"/>睡觉
+        <input type="button" value="开始计时" id="" onclick="startCount()">
+        <input type="button" value="结束计时" id="" onclick="stopCount()">
+    </form> -->
+    <form action="">
+        <input type="button" value="获取浏览器信息" onclick="getInfo()">
+    </form>
+</body>
+</html>

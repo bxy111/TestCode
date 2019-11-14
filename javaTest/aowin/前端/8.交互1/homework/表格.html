@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function addLine(){
+            var table = document.getElementById("table");
+            var tableHead = document.getElementById("tableHead");
+            // alert(tableHead.children.length)
+            var tr = document.createElement("tr");
+            tr.align="center";
+            for (var i=0; i < tableHead.children.length; i++){
+                var td = document.createElement("td");
+                td.innerHTML="test";
+                if (i == tableHead.children.length -1){
+                    td.innerHTML="<input type='button' value='删除' onclick='delLine(this)'>";
+                }
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+
+        function delLine(obj){
+            var tr = obj.parentNode.parentNode;
+            var table = document.getElementById("table");
+            table.removeChild(tr);
+        }
+
+        function emptyTable(){
+            var table = document.getElementById("table");
+            while (1 < table.children.length){
+                table.removeChild(table.children[1]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="增加一行" onclick="addLine()">
+        <input type="button" value="清空表格" onclick="emptyTable()">
+    </form>
+    <table style="width: 400px" border="1px solid black" id="table">
+        <tr id="tableHead">
+            <th>姓名</th>
+            <th>班级</th>
+            <th>年龄</th>
+            <th>地址</th>
+            <th>操作</th>
+        </tr>
+    </table>
+
+</body>
+</html>

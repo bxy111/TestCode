@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><databases><database><url>jdbc:mysql://127.0.0.1:3306/bxytest?characterEncoding=UTF-8&amp;useSSL=false</url><user>root</user><password>123456</password></database></databases>

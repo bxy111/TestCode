@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function onKP(obj){
+            var reg = /^[a-z][0-9a-z]{5,8}@(163|qq)\.com$/;
+            var sp = document.getElementById("sp");
+            if (reg.test(obj.value)){
+                sp.innerHTML="√";
+                sp.style.color="green";
+            }else{
+                sp.innerHTML="×";
+                sp.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        邮箱:<input type="text" onkeyup="onKP(this)"><span id="sp"></span>
+    </form>
+</body>
+</html>

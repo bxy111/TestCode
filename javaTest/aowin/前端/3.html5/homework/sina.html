@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1200px;
+            height: 2400px;
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+        #p1{
+            width: 100%;
+            height: 1.5%;
+            background-color: #F1F3F4;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: #EAEAEA;
+            /* border: 1px solid black; */
+        }
+        .p1-body{
+            width: 90%;
+            height: 100%;
+            margin: auto;
+            /* border: 1px solid black; */
+        }
+        .p1-body-left{
+            width: 58%;
+            height: 80%;
+            float: left;
+            margin-top: 6px;
+            /* border: 1px solid black; */
+        }
+        .p1-body-left a{
+            color: #1B1B1B;
+            text-decoration-line: none;
+            font-size: small;
+            font-weight: bold;
+        }  
+        .p1-body-right{
+            width: 40%;
+            height: 80%;
+            float: right;
+            text-align: right;
+            margin-top: 6px;
+            /* border: 1px solid black; */
+        }
+        .p1-body-right-left{
+            width: 87%;
+            height: 90%;
+            float: left;
+            text-align: right;
+            font-size: small;
+            margin-top: 3px;
+            /* border: 1px solid black; */
+        }
+        .p1-body-right-left a{
+            text-decoration-line: none;
+            color: #3E7CC0;
+        }
+        .p1-body-right-right{
+            width: 8%;
+            height: 70%;
+            float: left;
+            text-align: left;
+            font-size: small;
+            margin-top: 3px;
+            /* border: 1px solid black; */
+        }
+        .p1-body-right-right a{
+            color:white;
+            text-decoration-line: none;
+            background-color: #3E7CC0;
+            display: block;
+            padding-top: 1px;
+            padding-bottom: 2px;
+            padding-left: 4px;
+            padding-right: 1px;
+        }
+        #p2{
+            width: 90%;
+            height: 3.3%;
+            margin: auto;
+            margin-top: 5px;
+            /* border: 1px solid black; */
+        }
+        .p2-1{
+            width: 18%;
+            height: 100%;
+            float: left;
+            font-size: small;
+            font-weight: bold;
+            /* border: 1px solid black; */
+        }
+        .p2-6{
+            width: 8%;
+            height: 100%;
+            float: left;
+            font-size: small;
+            font-weight: bold;
+            /* border: 1px solid black; */
+        }
+        #p3{
+            width: 90%;
+            height: 3.2%;
+            margin: auto;
+            /* border: 1px solid black; */
+        }
+        #p4{
+            width: 90%;
+            height: 1.7%;
+            margin: auto;
+            /* border: 1px solid black; */
+        }
+        .p4-left{
+            width: 60%;
+            height: 100%;
+            float: left;
+            text-align: left;
+            vertical-align: center;
+            /* border: 1px solid black; */
+        }
+        .p4-left-1{
+            width: 30%;
+            height: 70%;
+            float: left;
+            text-align: left;
+            margin-top: 5px;
+            margin-left: 10px;
+            vertical-align: center;
+            /* border: 1px solid black; */
+        }
+        .p4-left-2{
+            width: 40%;
+            height: 70%;
+            float: left;
+            text-align: left;
+            margin-top: 10px;
+            font-size: small;
+            /* margin-right: 100px; */
+            /* vertical-align: center; */
+            /* border: 1px solid black; */
+        }
+        .p4-left-2 a{
+            text-decoration-line: none;
+            color: #A41A1E;
+        }
+        .p4-right{
+            width: 30%;
+            height: 100%;
+            float: right;
+            /* border: 1px solid black; */
+        }
+        .p4-right-1{
+            width: 60%;
+            height: 70%;
+            float: right;
+            text-align: right;
+            margin-top: 12px;
+            font-size: small;
+            vertical-align: center;
+            /* border: 1px solid black; */
+        }
+        .p4-right-1 a{
+            text-decoration-line: none;
+            color: #898989;
+        }
+        #p5{
+            width: 90%;
+            height: 1.7%;
+            margin: auto;
+            /* border: 1px solid black;  */
+        }
+        #p5 a{
+            color:#E0E7E9;
+            font-size: 17px;
+            text-decoration-line: none;
+            background-color: #213F86;
+            display: block;
+            float: left;
+            /* margin-top: 35px; */
+            /* margin-right: 10px; */
+            padding-top: 8px;
+            padding-bottom: 12px;
+            padding-left: 11px;
+            padding-right: 10px;
+        }
+        #p6{
+            width: 90%;
+            height: 15%;
+            margin: auto;
+            margin-top: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p6-left{
+            width: 30%;
+            height: 100%;
+            float: left;
+            /* border: 1px solid black;  */
+        }
+        .p6-left-top{
+            width: 95%;
+            height: 10%;
+            margin-top: 5px;
+            border-top-color: black;
+            border-top-style: solid;
+            border-top-width: 2px;
+            
+            /* border: 1px solid black;  */
+        }
+        .p6-left-top-1{
+            width: 19.3%;
+            height: 70%;
+            float: left;
+            color:#AEC4DE;
+            text-align: center;
+            background-color: #F5F5F5;
+            padding-top: 6px;
+            border: 1px solid #E4E4E4; 
+            border-top: none;
+            /* border: 1px solid black;  */
+        }
+        .p6-left-top-2{
+            width: 19.5%;
+            height: 70%;
+            float: right;
+            color:#AEC4DE;
+            text-align: center;
+            padding-top: 6px;
+            background-color: #F5F5F5;
+            border: 1px solid #E4E4E4; 
+            border-top: none;
+        }
+        .p6-left-bottom{
+            width: 95%;
+            height: 70%;
+            margin-top: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p6-center{
+            width: 40%;
+            height: 100%;
+            float: left;
+            /* border: 1px solid black;  */
+        }
+        .p6-center-top{
+            width: 95%;
+            height: 10%;
+            margin-top: 5px;
+            border-top-color: #990000;
+            border-top-style: solid;
+            border-top-width: 2px;
+            border-bottom-color: #E1E1E1;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            /* border: 1px solid black;  */
+        }
+        .p6-center-top-left{
+            width: 30%;
+            height: 70%;
+            color: #990000;
+            font-size: large;
+            float: left;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .p6-center-top-right{
+            width: 60%;
+            height: 70%;
+            text-align: right;
+            font-size: small;
+            float: right;
+            margin-top: 8px;
+        }
+        .p6-center-bottom{
+            width: 95%;
+            height: 80%;
+            margin-top: 10px;
+            text-align: center;
+            /* border-top-color: #E1E1E1;
+            border-top-style: solid;
+            border-top-width: 1px; */
+            border-bottom-color: #E1E1E1;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+        }
+        .p6-center-bottom-1{
+            width: 90%;
+            height: 12%;
+            text-align: center;
+        }
+        .p6-center-bottom-1 a{
+            text-decoration-line: none;
+            color:#2F5596;
+        }
+        .p6-center-bottom-2{
+            width: 100%;
+            height: 12%;
+            text-align: left;
+        }
+        .p6-center-bottom-2 a{
+            text-decoration-line: none;
+            color:#737373;
+            font-size: small;
+        }
+        .p6-right{
+            width: 29%;
+            height: 100%;
+            float: right;
+            /* border: 1px solid black; */
+        }
+        .p6-right-top{
+            width: 95%;
+            height: 15%;
+            margin-top: 5px;
+            border-top-color: black;
+            border-top-style: solid;
+            border-top-width: 2px;
+            
+            /* border: 1px solid black;  */
+        }
+        .p6-right-top-1{
+            width: 30%;
+            height: 70%;
+            float: left;
+            color:black;
+            text-align: center;
+            background-color: #F5F5F5;
+
+            /* margin-top: 5px; */
+            padding-top: 5px;
+            border: 1px solid #E4E4E4; 
+            border-top: none;
+            /* border: 1px solid black;     */
+        }
+        .p6-right-top-2{
+            width: 68.6%;
+            height: 70%;
+            float: right;
+            color:#3D5791;
+            text-align: left;
+            padding-top: 5px;
+            font-weight:bold;
+            font-size: small;
+            background-color: #F5F5F5;
+            /* padding-top: 6px; */
+            border: 1px solid #E4E4E4; 
+            border-top: none;
+        }
+        .p6-right-bottom{
+            width: 95%;
+            height: 70%;
+            /* margin-top: 5px; */
+            /* border: 1px solid black;  */
+        }
+        #p7{
+            width: 90%;
+            height: 1.7%;
+            margin: auto;
+            margin-top: 10px;
+            background-color: #1F3B7B;
+            /* border: 1px solid black; */
+        }
+        .p7-left{
+            width: 40%;
+            height: 70%;
+            color: white;
+            font-size:x-large;
+            margin-top: 5px;
+            margin-left: 10px;
+            font-weight: bolder;
+            float: left;
+        }
+        .p7-right{
+            width: 40%;
+            height: 70%;
+            color: white;
+            font-size:small;
+            margin-top: 15px;
+            float: right;
+            text-align: right;
+            /* border: 1px solid black; */
+        }
+        #p7 a{
+            text-decoration-line: none;
+            color: white;
+        }
+        #p8{
+            width: 90%;
+            height: 30%;
+            margin: auto;
+            margin-top: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p8-left{
+            width: 37%;
+            height: 95%;
+            margin-top: 10px;
+            float: left;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-top{
+            width: 90%;
+            height: 8%;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-top-left{
+            width: 50%;
+            height: 50%;
+            float: left;
+            font-size: large;
+            margin-top: 5px;
+            padding-top: 15px;
+            /* font-weight: bold; */
+            /* border: 1px solid black;  */
+        }
+        .p8-left-top-right{
+            width: 30%;
+            height: 50%;
+            float: right;
+            text-align: right;
+            margin-top: 5px;
+            font-size: small;
+            padding-top: 18px;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-top-right a{
+            color: #A8B4BB;
+            text-decoration-line: none;
+        }
+        .p8-left-second{
+            width: 90%;
+            height: 30%;
+            /* border: 1px solid #E4E4E4;  */
+            border-top-color: black;
+            border-top-style: solid;
+            border-top-width: 2px;
+        }
+        .p8-left-second-buttonPack{
+            width: 90%;
+            height: 10%;
+            margin-top: 10px;
+            margin-left: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-second-button{
+            width: 20%;
+            height: 95%;
+            float: left;
+            margin-right: 8px;
+            text-align: center;
+            border: 1px solid #E4E4E4; 
+        }
+        .p8-left-second-item{
+            width: 95%;
+            height: 10%;
+            margin-left: 10px;
+            margin-top: 10px;
+            /* border: 1px solid #E4E4E4;  */
+        }
+        .p8-left-second-item-left{
+            width: 8%;
+            height: 80%;
+            font-size: larger;
+            text-align: center;
+            font-weight: bold;
+            color: #666666;
+            float: left;
+            /* border: 1px solid #E4E4E4;  */
+        }
+        .p8-left-second-item-right{
+            width: 90%;
+            height: 80%;
+            font-size: small;
+            font-weight:lighter;
+            color: #666666;
+            float: right;
+            margin-top: 5px;
+            /* border: 1px solid #E4E4E4;  */
+        }
+        .p8-left-four{
+            width: 95%;
+            height: 50%;
+            /* border: 1px solid #E4E4E4;  */
+            border-top-color: black;
+            border-top-style: solid;
+            border-top-width: 2px;
+            /* border: 1px solid #E4E4E4; */
+        }
+        .p8-left-four-first{
+            width: 100%;
+            height: 10%;
+            font-size: large;
+            font-weight: bold;
+            margin-top: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-four-second{
+            width: 100%;
+            height: 40%;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-four-second-left{
+            width: 40%;
+            height: 90%;
+            float: left;
+            margin-top: 10px;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-four-second-right{
+            width: 58%;
+            height: 90%;
+            float: right;
+            margin-top: 10px;
+            font-size: smaller;
+            background-color: #F2F2F2;
+            color: #707070;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-four-three{
+            width: 100%;
+            height: 40%;
+            /* margin-top: 10px; */
+            font-size:smaller;
+            color: #707070;
+            text-align: left;
+            /* border: 1px solid black;  */
+        }
+        .p8-left-four-three ul{
+            margin: 17px;
+            padding: 0px;
+        }
+        .p8-center{
+            width: 40%;
+            height: 95%;
+            margin-top: 10px;
+            padding-left: 5px;
+            padding-top: 10px;
+            float: left;
+            /* border: 1px solid black;  */
+        }
+        .p8-center-part{
+            width: 98%;
+            height: 25%;
+            padding-top: 15px;
+            /* border: 1px solid black;  */
+        }
+        .p8-center-part-item{
+            width: 100%;
+            height: 13%;
+            /* border: 1px solid black;  */
+        }
+        .p8-center-part-item-left{
+            width: 80%;
+            height: 95%;
+            float: left;
+            font-size:small;
+            color: #3D558D;
+            /* border: 1px solid black;  */
+        }
+        .p8-center-part-item-left ul{
+            margin: 0px;
+            margin-left: 20px;
+            padding: 0px;
+        }
+        .p8-center-part-item-right{
+            width: 15%;
+            height: 95%;
+            float: right;
+            text-align: right;
+            font-size: smaller;
+            color: #BDBAD2;
+            /* border: 1px solid black;  */
+        }
+
+        .p8-right{
+            width: 20%;
+            height: 95%;
+            margin-top: 10px;
+            padding-top: 10px;
+            float:right;
+            /* border: 1px solid black;  */
+        }
+        .p8-right-second{
+            width: 95%;
+            height: 30%;
+            text-align: center;
+        }
+        .bottom{
+            width: 80%;
+            height: 8%;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .bottom a{
+            color: darkred;
+            text-decoration-line: none
+        }
+        .bottom a:hover{
+            color: #FF00FF;
+            text-decoration-line: none
+        }
+    </style>
+</head>
+<body>
+    <div id="p1">
+        <div class="p1-body">
+            <div class="p1-body-left">
+                <a name="top" href="#">新浪首页</a>&nbsp;》<a href="#">加油菜籽船在中国海域打转数周</a>&nbsp;
+                <a href="#">这位朝鲜官员还活着</a>&nbsp;<a href="#">大批香港市民集会支持警察执法</a>
+            </div>
+            <div class="p1-body-right">
+                <div class="p1-body-right-left">
+                    <a href="#">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" placeholder="请输入关键字">
+                    <select name="option" id="">
+                        <option value="xinwen" selected>新闻</option>
+                        <option value="xinwen" >视频</option>
+                        <option value="xinwen" >小说</option>
+                    </select>
+                </div>
+                <div class="p1-body-right-right">
+                    <a href="#">搜索</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="p2">
+        <div class="p2-1">
+            <table align="center">
+                <tr>
+                    <td>新闻&nbsp;&nbsp;</td>
+                    <td>军事&nbsp;&nbsp;</td>
+                    <td>国内&nbsp;&nbsp;</td>
+                    <td>国际&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>财经&nbsp;&nbsp;</td>
+                    <td>股票&nbsp;&nbsp;</td>
+                    <td>基金&nbsp;&nbsp;</td>
+                    <td>外汇&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>科技&nbsp;&nbsp;</td>
+                    <td>手机&nbsp;&nbsp;</td>
+                    <td>探索&nbsp;&nbsp;</td>
+                    <td>众测&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+        <div class="p2-1">
+            <table align="center">
+                <tr>
+                    <td>体育&nbsp;&nbsp;</td>
+                    <td>NBA&nbsp;&nbsp;</td>
+                    <td>英超&nbsp;&nbsp;</td>
+                    <td>中超&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>娱乐&nbsp;&nbsp;</td>
+                    <td>明星&nbsp;&nbsp;</td>
+                    <td>电影&nbsp;&nbsp;</td>
+                    <td>星座&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>汽车&nbsp;&nbsp;</td>
+                    <td>报价&nbsp;&nbsp;</td>
+                    <td>买车&nbsp;&nbsp;</td>
+                    <td>新车&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+        <div class="p2-1">
+            <table align="center">
+                <tr>
+                    <td>博客&nbsp;&nbsp;</td>
+                    <td>专栏&nbsp;&nbsp;</td>
+                    <td>历史&nbsp;&nbsp;</td>
+                    <td>天气&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>视频&nbsp;&nbsp;</td>
+                    <td>综艺&nbsp;&nbsp;</td>
+                    <td>VR&nbsp;&nbsp;</td>
+                    <td>直播&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>房产&nbsp;&nbsp;</td>
+                    <td>二手房&nbsp;&nbsp;</td>
+                    <td>家居&nbsp;&nbsp;</td>
+                    <td>收藏&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+        <div class="p2-1">
+            <table align="center">
+                <tr>
+                    <td>时尚&nbsp;&nbsp;</td>
+                    <td>女性&nbsp;&nbsp;</td>
+                    <td>医药&nbsp;&nbsp;</td>
+                    <td>育儿&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>教育&nbsp;&nbsp;</td>
+                    <td><font color="red">高考</font>&nbsp;&nbsp;</td>
+                    <td>公益&nbsp;&nbsp;</td>
+                    <td>佛学&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>图片&nbsp;&nbsp;</td>
+                    <td>读书&nbsp;&nbsp;</td>
+                    <td>黑猫&nbsp;&nbsp;</td>
+                    <td>司法&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+        <div class="p2-1">
+            <table align="center">
+                <tr>
+                    <td>微博&nbsp;&nbsp;</td>
+                    <td>城市&nbsp;&nbsp;</td>
+                    <td>浙江&nbsp;&nbsp;</td>
+                    <td>学投资&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>旅游&nbsp;&nbsp;</td>
+                    <td>文化&nbsp;&nbsp;</td>
+                    <td>彩票&nbsp;&nbsp;</td>
+                    <td>高尔夫&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>游戏&nbsp;&nbsp;</td>
+                    <td>手游&nbsp;&nbsp;</td>
+                    <td>邮箱&nbsp;&nbsp;</td>
+                    <td>English&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+        <div class="p2-6">
+            <table align="center">
+                <tr>
+                    <td>交易&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>理财&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>更多&nbsp;&nbsp;</td>
+                </tr> 
+            </table>
+        </div>
+    </div>
+    <div id="p3">
+        <img src="投资.bmp" alt="" width="100%" height="100%">
+    </div>
+    <div id="p4">
+        <div class="p4-left">
+            <div class="p4-left-1">
+                <img src="sina_logo.bmp" alt="" width="50%" height="100%">
+            </div>
+            <div class="p4-left-2">
+                <a href="#">新浪新闻客户端</a>
+                <select name="option" id="">
+                    <option value="xinwen" selected>更多</option>
+                    <option value="xinwen" >视频</option>
+                    <option value="xinwen" >小说</option>
+                </select>
+            </div>
+        </div>
+        <div class="p4-right">
+            <div class="p4-right-1">
+                <a href="#">设为书签</a>
+                <a href="#">手机新浪网</a>
+            </div>
+        </div>
+    </div>
+    <div id="p5">
+        <a href="#">滚动</a>
+        <a href="#">排行</a>
+        <a href="#">政务</a>
+        <a href="#">暖闻</a>
+        <a href="#">国内</a>
+        <a href="#one">国际</a>
+        <a href="#">军事</a>
+        <a href="#">辟谣</a>
+        <a href="#">知事</a>
+        <a href="#">文化</a>
+        <a href="#">司法</a>
+        <a href="#">黑猫投诉</a>
+        <a href="#">图片</a>
+        <a href="#">视频</a>
+        <a href="#">体育</a>
+        <a href="#">娱乐</a>
+        <a href="#">财经</a>
+        <a href="#">科技</a>
+        <a href="#">专题</a>
+    </div>
+    <div id="p6">
+        <div class="p6-left">
+            <div class="p6-left-top">
+                <div class="p6-left-top-1">
+                    聚焦
+                </div>
+                <div class="p6-left-top-1">
+                    热点
+                </div>
+                <div class="p6-left-top-1">
+                    百态
+                </div>
+                <div class="p6-left-top-1">
+                    天下
+                </div>
+                <div class="p6-left-top-2">
+                    军事
+                </div>
+            </div>
+            <div class="p6-left-bottom">
+                <img src="zuobian.bmp" alt="" width="100%" height="100%">
+            </div>
+        </div>
+        <div class="p6-center">
+            <div class="p6-center-top">
+                <div class="p6-center-top-left">
+                    要闻
+                </div>
+                <div class="p6-center-top-right">
+                    北京时间：2019.7.1&nbsp;周一
+                </div>
+            </div>
+            <div class="p6-center-bottom">
+                <div class="p6-center-bottom-1">
+                    <a href="#">原创时政微视频：初心不改&nbsp;矢志不渝</a>
+                </div>
+                <div class="p6-center-bottom-2">
+                        <a href="#">[习近平对黄文秀同志先进事迹作出重要指示&nbsp;</a>
+                        <a href="#">元首外交亮点纷呈]</a>
+                </div>
+                <div class="p6-center-bottom-1">
+                    <a href="#">意外而至的第三次&nbsp;“金特会”&nbsp;这国功不可没</a>
+                </div>
+                <div class="p6-center-bottom-2">
+                        <a href="#">[白宫新闻秘书与朝鲜警卫冲突受轻伤&nbsp;</a>
+                        <a href="#">这位朝鲜官员确认还活着]</a>
+                </div>
+                <div class="p6-center-bottom-1">
+                    <a href="#">进17万香港市民冒雨集会&nbsp;支持警察执法</a>
+                </div>
+                <div class="p6-center-bottom-2">
+                        <a href="#">[梁家辉等众明星参与&nbsp;</a>
+                        <a href="#">香港导演：天地有正气&nbsp;支持警队除暴安良]</a>
+                </div>
+                <div class="p6-center-bottom-1">
+                    <a href="#">人类为何要为5G疯狂?&nbsp;中兴总裁回答的很震撼</a>
+                </div>
+                <div class="p6-center-bottom-1">
+                    <a href="#">美这一前所未有动作&nbsp;中国欧盟印度都在紧盯</a>
+                </div>
+            </div>
+        </div>
+        <div class="p6-right">
+            <div class="p6-right-top">
+                <div class="p6-right-top-1">
+                    议事厅
+                </div>
+                <div class="p6-right-top-2">
+                    TOPTALK <br>
+                    传播有影响力的声音
+                </div>
+            </div>
+            <div class="p6-right-bottom">
+                <img src="右边.bmp" alt="" width="100%" height="100%">
+            </div>
+        </div>
+    </div>
+    <div id="p7">
+        <div class="p7-left">
+            <a name="one" href="">国际新闻</a>
+        </div>
+        <div class="p7-right">
+            <a href="#">国际新闻专题</a>&nbsp;|&nbsp;<a href="">新闻图片</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">更多</a>>
+        </div>
+    </div>
+    <div id="p8">
+        <div class="p8-left">
+            <div class="p8-left-top">
+                <div class="p8-left-top-left">
+                    国际新闻每日排行
+                </div>
+                <div class="p8-left-top-right">
+                    <a>更多</a><font color="red">></font>
+                </div>
+            </div>
+            <div class="p8-left-second">
+                <div class="p8-left-second-buttonPack">
+                    <div class="p8-left-second-button">
+                        今天
+                    </div>
+                    <div class="p8-left-second-button">
+                        昨天
+                    </div>
+                    <div class="p8-left-second-button">
+                        一周
+                    </div>
+                </div>
+                <div class="p8-left-second-item">
+                    <div class="p8-left-second-item-left">
+                        1
+                    </div>
+                    <div class="p8-left-second-item-right">
+                        特朗普和金正恩谈了这些事&nbsp;确认这位朝鲜官员还活着
+                    </div>
+                </div>
+                <div class="p8-left-second-item">
+                    <div class="p8-left-second-item-left">
+                        2
+                    </div>
+                    <div class="p8-left-second-item-right">
+                        美国这一动作&nbsp;中国欧盟印度都在“紧盯”
+                    </div>
+                </div>
+                <div class="p8-left-second-item">
+                    <div class="p8-left-second-item-left">
+                        3
+                    </div>
+                    <div class="p8-left-second-item-right">
+                        这位美国高官频频在华上头条&nbsp;媒体：停止你的表演
+                    </div>
+                </div>
+                <div class="p8-left-second-item">
+                    <div class="p8-left-second-item-left">
+                        4
+                    </div>
+                    <div class="p8-left-second-item-right">
+                        特朗普跨这条红线靠社交媒体帮忙?你忘了这个国家
+                    </div>
+                </div>
+                <div class="p8-left-second-item">
+                    <div class="p8-left-second-item-left">
+                        5
+                    </div>
+                    <div class="p8-left-second-item-right">
+                        朝美领导人会晤插曲：白宫新闻秘书与朝鲜警卫冲突
+                    </div>
+                </div>
+            </div>
+            <div class="p8-left-top">
+                <div class="p8-left-top-left">
+                    新浪旅游
+                </div>
+                <div class="p8-left-top-right">
+                    <a>更多</a><font color="red">></font>
+                </div>
+            </div>
+            <div class="p8-left-four">
+                <div class="p8-left-four-first">
+                    爱尔兰翡翠岛&nbsp;从魔法中醒来
+                </div>
+                <div class="p8-left-four-second">
+                    <div class="p8-left-four-second-left">
+                        <img src="爱尔兰.bmp" alt="" width="100%" height="100%">
+                    </div>
+                    <div class="p8-left-four-second-right">
+                        从迷雾笼罩的史前时代，到熙熙<br><br>攘攘的现代街头。这是什么奇妙<br><br>的魔法吧？变出了青翠的田野、<br><br>悬崖上成群牛羊...
+                    </div>
+                </div>
+                <div class="p8-left-four-three">
+                    <ul type="square">
+                        <li>
+                            国内|&nbsp;苏州有个震泽古镇&nbsp;一江分南北重庆邂逅时尚江北
+                        </li>
+                        <li>
+                            出境|&nbsp;布拉格城堡偶遇性感女郎&nbsp;库兰达小镇的昆虫情结
+                        </li>
+                        <li>
+                            行业|&nbsp;7月10号实施新列车运行图&nbsp;大兴机场出入境有变化
+                        </li>
+                        <li>
+                            视频|&nbsp;我在热带雨林里徒步&nbsp;中国最爱吃冰淇淋的城市
+                        </li>
+                        <li>
+                            发现|&nbsp;罗云熙斐济慢游之旅&nbsp;马尔代夫的华丽日落
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="p8-center">
+            <div class="p8-center-part">
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                光明网评论员：花263万开G20不可能&nbsp;但愿望并不差
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:43
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                时隔13年&nbsp;英国皇室成员将再次访问巴基斯坦
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:35
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                阿富汗首都喀布尔发生爆炸&nbsp;已致15人受伤
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:25
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                外媒：印控克什米尔发生车祸&nbsp;导致至少31人死亡
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:07
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                巴黎7月起免费为公众检查艾滋病&nbsp;试行一年
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:57
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                伊万卡和蓬佩奥同台亮相&nbsp;特朗普：“美女与野兽”
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:42
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                满屏尴尬&nbsp;G20上特鲁多这一幕在各国社交网络热传
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:41
+                    </div>
+                </div>
+            </div>
+            <hr align="center" width="96%" style="border:1px dotted #E4E4E4">
+            <div class="p8-center-part">
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                光明网评论员：花263万开G20不可能&nbsp;但愿望并不差
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:43
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                时隔13年&nbsp;英国皇室成员将再次访问巴基斯坦
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:35
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                阿富汗首都喀布尔发生爆炸&nbsp;已致15人受伤
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:25
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                外媒：印控克什米尔发生车祸&nbsp;导致至少31人死亡
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:07
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                巴黎7月起免费为公众检查艾滋病&nbsp;试行一年
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:57
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                伊万卡和蓬佩奥同台亮相&nbsp;特朗普：“美女与野兽”
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:42
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                满屏尴尬&nbsp;G20上特鲁多这一幕在各国社交网络热传
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:41
+                    </div>
+                </div>
+            </div>
+            <hr align="center" width="96%" style="border:1px dotted #E4E4E4">
+            <div class="p8-center-part">
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                光明网评论员：花263万开G20不可能&nbsp;但愿望并不差
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:43
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                时隔13年&nbsp;英国皇室成员将再次访问巴基斯坦
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:35
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                阿富汗首都喀布尔发生爆炸&nbsp;已致15人受伤
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:25
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                外媒：印控克什米尔发生车祸&nbsp;导致至少31人死亡
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        13:07
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                巴黎7月起免费为公众检查艾滋病&nbsp;试行一年
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:57
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                伊万卡和蓬佩奥同台亮相&nbsp;特朗普：“美女与野兽”
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:42
+                    </div>
+                </div>
+                <div class="p8-center-part-item">
+                    <div class="p8-center-part-item-left">
+                        <ul type="square">
+                            <li>
+                                满屏尴尬&nbsp;G20上特鲁多这一幕在各国社交网络热传
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p8-center-part-item-right">
+                        12:41
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <a href="#top">回到顶部</a>
+            </div>
+        </div>
+        <div class="p8-right">
+            <div class="p8-left-top">
+                <div class="p8-left-top-left">
+                    国际热图
+                </div>
+                <div class="p8-left-top-right">
+                    <a>更多</a><font color="red">></font>
+                </div>
+            </div>
+            <div class="p8-right-second">
+                <img src="闪电.bmp" alt="" width="80%" height="100%">
+            </div>
+            <div class="p8-left-top">
+                <div class="p8-left-top-left">
+                    黑猫投诉
+                </div>
+                <div class="p8-left-top-right">
+                    <a>更多</a><font color="red">></font>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

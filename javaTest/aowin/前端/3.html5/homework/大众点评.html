@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            width:1200px;
+            height: 800px;
+            margin: auto;
+            border-left-color: #F0F5FA;
+            border-left-style: solid;
+            border-left-width: 2px;
+        }
+        #head {
+            width: 90%;
+            height: 8%;
+            margin-left: 20px;
+            margin-top:10px;
+            border-bottom-width: 3px;
+            border-bottom-color: #FFA128;
+            border-bottom-style: solid;
+            /* border: 1px solid black */
+        }
+        .head-left {
+            width: 12%;
+            height: 60%;
+            margin-top: 15px;
+            text-align: center;
+            float: left;
+            /* border: 1px solid black */
+        }
+        .head-right {
+            width: 80%;
+            height: 90%;
+            margin-top: 5px;
+            float: left;
+            /* border: 1px solid black */
+        }
+        .head-right span1{
+            color: #000;
+            font-weight:bold;
+            font-size: small;
+        }
+        .head-right a{
+            text-decoration-line: none;
+            font-size: small;
+        }
+        .head-right-bottom{
+            width:70%;
+            height:63%;
+            float:left;
+            /* border: 1px solid black; */
+        }
+        .head-right-bottom a{
+            color:black;
+            font-size: 10px;
+            text-decoration-line: none;
+            background-color: #FFE79C;
+            display: block;
+            float: left;
+            margin-top: 10px;
+            margin-right: 2px;
+            padding-top: 3px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border:2px solid #FFD775;
+        }
+        #body {
+            width: 100%;
+            height: 80%;
+            /* border: 1px solid black */
+        }
+        .body-top {
+            width: 40%;
+            height: 5%;
+            margin-top: 20px;
+            text-align:center;
+            color: red;
+            /* border: 1px solid black */
+        }
+        .body-email {
+            width: 80%;
+            height: 5%;
+            margin-top: 5px;
+            /* border: 1px solid black */
+        }
+        .body-email-left {
+            width: 12%;
+            height: 90%;
+            float: left;
+            text-align: right;
+            /* border: 1px solid black */
+        }
+        .body-email-right {
+            width: 70%;
+            height: 90%;
+            float: left;
+            margin-left: 5px;
+            /* border: 1px solid black */
+        }
+        .body-code {
+            width: 80%;
+            height: 10%;
+            margin-top: 5px;
+            /* border: 1px solid black */
+        }
+        .body-code-left {
+            width: 12%;
+            height: 40%;
+            float: left;
+            text-align: right;
+            margin-top: 15px;
+            /* border: 1px solid black */
+        }
+        .body-code-right {
+            width: 70%;
+            height: 90%;
+            float: left;
+            margin-left: 5px;
+            /* border: 1px solid black */
+        }
+        .body-code-right-left {
+            width: 20%;
+            height: 80%;
+            float: left;
+            /* margin-left: 5px; */
+            margin-top: 3px;
+            /* border: 1px solid black */
+        }
+        .body-code-right-right {
+            width: 77%;
+            height: 90%;
+            float: right;
+            margin-left: 5px;
+            /* border: 1px solid black */
+        }
+        .body-submit {
+            width: 30%;
+            height: 90%;
+            float: left;
+            margin-left: 5px;
+            text-align: center;
+            /* border: 1px solid black */
+        }
+        .body-bottom {
+            width: 90%;
+            height: 20%;
+            margin-left: 20px;
+            margin-top:20px;
+            /* border: 1px solid black */
+        }
+        .body-bottom-one {
+            widows: 100%;
+            height: 15%;
+            text-align: right;
+            color: #D9D9D9;
+            font-size: small;
+            border-bottom-color: #888888;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            /* border: 1px solid black */
+        }
+        .body-bottom-two {
+            widows: 100%;
+            height: 15%;
+            font-size: small;
+            /* border: 1px solid black */
+        }
+        .body-bottom-two span{
+            font-size: small;
+            color: #D9D9D9;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <div class="head-left">
+            <img src="大众点评.bmp" alt="">
+        </div>
+        <div class="head-right">
+            <span1>上海站</span1>[<a href="#">切换城市</a>]<br>
+            <div class="head-right-bottom">
+                <a href="#">我的主页</a>
+                <a href="#">美食</a>
+                <a href="#">购物</a>
+                <a href="#">休闲娱乐</a>
+                <a href="#">生活服务</a>
+                <a href="#">优惠券</a>
+                <a href="#">会员卡</a>
+                <a href="#">社区</a>
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div class="body-top">
+            快速注册成为大众会员
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                E-mail或手机
+            </div>
+            <div class="body-email-right">
+                <input type="text"/>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                昵称
+            </div>
+            <div class="body-email-right">
+                <input type="text"/>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                性别
+            </div>
+            <div class="body-email-right">
+                <input type="radio" name="sex" value="male" checked><img src="男.bmp" alt="">男
+                <input type="radio" name="sex" value="female"><img src="女.bmp" alt="">女
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                设置密码
+            </div>
+            <div class="body-email-right">
+                <input type="password"/>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                您的喜好
+            </div>
+            <div class="body-email-right">
+                <input type="checkbox" name="hobby" value="food"/>美食
+                <input type="checkbox" name="hobby" value="shopping"/>购物
+                <input type="checkbox" name="hobby" value="play"/>休闲娱乐
+                <input type="checkbox" name="hobby" value="service"/>生活服务
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                长居住地
+            </div>
+            <div class="body-email-right">
+                <select name="address" id="">
+                    <option value="beijing" selected>北京</option>
+                    <option value="shanghai" >上海</option>
+                    <option value="hangzhou" >杭州</option>
+                </select>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                来源调查
+            </div>
+            <div class="body-email-right">
+                <select name="address" id="" >
+                    <option value="1" selected>你是如何知道大众点评的？</option>
+                    <option value="2" >朋友推荐</option>
+                    <option value="3" >电视广告</option>
+                    <option value="4" >网页广告</option>
+                </select>
+            </div>
+        </div>
+        <div class="body-code">
+            <div class="body-code-left">
+                验证码
+            </div>
+            <div class="body-code-right">
+                <div class="body-code-right-left">
+                    <img src="验证码.bmp" alt="">
+                </div>
+                <div class="body-code-right-right">
+                    请输入左边的数字<br>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                &nbsp;
+            </div>
+            <div class="body-email-right">
+                <input type="checkbox" name="policy" value="yes">我已阅读并同意
+                <a href="#">大众点评网的注册协议</a>
+            </div>
+        </div>
+        <div class="body-email">
+            <div class="body-email-left">
+                &nbsp;
+            </div>
+            <div class="body-submit">
+                <input type="submit" value="提交注册">
+            </div>
+        </div>
+        <div class="body-bottom">
+            <div class="body-bottom-one">
+                对此页面有意见或建议?
+                <a href="#">请告诉我们</a>
+            </div>
+            <div class="body-bottom-two">
+                    @copy;2003-2008&nbsp;dianping.com,All&nbsp;Rights&nbsp;Reserved.&nbsp;沪B2-20040012&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;
+                    <a href="#">关于我们</a>
+                    <a href="#">人才招聘</a>
+                    <a href="#">站务论坛</a>
+                    <a href="#">链接及合作</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">网站地图</a><br>
+                    <span>本站发布的所有内容，未经许可，不得转载，详见《版权说明》。</span>
+                </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            background-color: #0985C5;
+            margin: auto;
+        }
+        .matrix1{
+            width: 400px;
+            height: 200px;
+            background-color: red;
+            margin: auto;
+            border: 10px solid black;
+            margin-top:40px;
+            border-radius: 200px 200px 0 0;
+            transition: transform 2s;
+        }
+        .matrix1:hover{
+            transform:translate(0, -300px);
+        }
+        .square1{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border:10px solid black;
+            margin: auto;
+            float: left;
+            margin-top: 150px;
+            margin-left: 150px;
+            border-radius: 50px;
+        }
+        .square2{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border:2px solid black;
+            margin: auto;
+            float:left;
+            margin-top: 22px;
+            margin-left: 22px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 2px black;
+        }
+        .matrix2{
+            width: 400px;
+            height: 200px;
+            background-color: white;
+            margin: auto;
+            border: 10px solid black;
+            border-radius: 0 0 200px 200px;
+            transition: transform 2s;
+        }
+        .matrix2:hover{
+            transform:translate(-400px,0);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="matrix1">
+            <div class="square1">
+                <div class="square2">
+                </div>
+            </div>
+        </div>
+        <div class="matrix2">
+
+        </div>
+    </div>
+</body>
+</html>

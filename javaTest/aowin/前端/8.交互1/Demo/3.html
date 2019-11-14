@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id="sp1">这是文字1</span>
+    <span>这是文字2</span>
+    <span>这是文字3</span>
+    <form action="">
+        <input type="button" value="点击" onclick="onclick">
+    </form>
+</body>
+<script>
+        var sp = document.getElementById("sp1");
+        alert(sp.parentNode.children[1].innerHTML);
+        alert(document.forms.length);
+</script>
+</html>

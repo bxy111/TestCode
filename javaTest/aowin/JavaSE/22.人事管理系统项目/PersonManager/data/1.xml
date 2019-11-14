@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user>
+        <id>1</id>
+        <name>admin</name>
+        <sex>男</sex>
+        <age>0</age>
+        <department>null</department>
+        <salary>0</salary>
+    </user>
+    <user>
+        <id>2</id>
+        <name>xiaohong</name>
+        <sex>女</sex>
+        <age>20</age>
+        <department>人事部</department>
+        <salary>7000</salary>
+    </user>
+    <user>
+        <id>3</id>
+        <name>ming</name>
+        <sex>女</sex>
+        <age>23</age>
+        <department>研发部</department>
+        <salary>10000</salary>
+    </user>
+</users>

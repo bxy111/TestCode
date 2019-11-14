@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 单击禁用按钮
+        function onc(){
+            var button = document.getElementById("button");
+            button.disabled = true;
+        }
+
+        // 双击启用按钮
+        function ondblc(){
+            var button = document.getElementById("button");
+            button.disabled = false;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="" id="" value="按钮" onclick="onc()" ondblclick="ondblc()">
+    <input type="button" name="" value="按钮2" id="button">
+</body>
+</html>

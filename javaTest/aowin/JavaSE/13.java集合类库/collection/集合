@@ -1,0 +1,54 @@
+1.集合跟数组的区别
+  1）数组在使用时必须初始化长度 集合长度随着元素增加而增加
+  2）数组可以存放基本数据类型，也可以存放对象  集合存放只能是对象
+  3）一个数组只能存放一种类型的数据 一个集合可以存放多种对象
+  
+ 
+ 2.集合
+ Collection:集合上层接口
+ 	List:列表 有序的可以重复的元素
+ 		ArrayList：底层是数组实现 对应连续存储空间  查询和修改效率高 add() remove() get() set()
+ 		LinkedList：底层实现是链表  存储空间不连续  新增和删除效率高
+ 		Vector: 同步向量 线程安全
+ 			Stack：栈  先进后出的规则 push() pop() peek()
+ 	
+ 	Set:集  无序的不可重复的元素
+ 		HashSet:底层由hash表支持   判断元素是否重复过程：
+ 			1.先调用对象的hashcode()返回一个hashcode值 如果值不同则认为是不同的元素 如果相同则执行第二步
+			2.调用对象的equals()去比较 返回true则认为是相同对象 返回false则认为是不同的
+			
+			可以重写hashcode() 和 equals()来改变比较方式
+			
+ 		TreeSet:底层由二叉树支持  要求元素有自然顺序 通过Comparable接口实现的 
+ 				元素类型一致 否则无法比较
+ 							
+ 	
+ Map:双列集合  键值对 键不能重复  值可以重复
+ 	HashMap: 键和值都可以为null
+ 	HashTable:键和值都不可以为null
+ 	TreeMap:键有自然顺序 不能为null
+ 	
+泛型：约束数据类型
+ 
+Collection:集合上层接口  List和Set是他的子接口
+Collections:集合的工具类 提供静态方法操作集合类
+
+Arrays:数据工具类 toString(arr)
+
+Comparable：自然顺序的接口  需要有自然顺序的类去实现 使该类本身拥有自然顺序
+Comparator：比较器接口  定义类去实现该接口  该类成为工具类 为其他类提供排序服务
+
+ 
+ 基本数据类型封装类  封装类默认值null   Byte b=null;  
+ byte			Byte 
+ short			Short
+ int			Integer   
+ long			Long
+ float			Float
+ double			Double
+ char			Character
+ boolean		Boolean
+ 
+ 
+ 
+ 

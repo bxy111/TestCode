@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 400px;
+            height: 302px;
+            margin: auto;
+            border-bottom-color: black;
+            border-bottom-width: 2px;
+            border-bottom-style:solid;
+            /* border: 1px solid black */
+        }
+        .top{
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            border: 1px solid white;
+        }
+        .head{
+            width: 100px;
+            height: 50px;
+            background-color: #A4CA39;
+            margin: auto;
+            margin-top: 95px; 
+            border-radius: 50px 50px 0 0;
+            /* border: 1px solid black */
+        }
+        .left-eye{
+            width: 10px;
+            height: 10px;
+            border-radius: 20px;
+            background-color:white;
+            float: left;
+            transform: translate(30px, 20px);
+            transition: background-color 1s;
+            /* border: 1px solid black */
+        }
+        .left-eye:hover{
+            background-color: red;
+        }
+        .right-eye{
+            width: 10px;
+            height: 10px;
+            border-radius: 20px;
+            background-color:white;
+            float: left;
+            transform: translate(50px, 20px);
+            transition: background-color 1s;
+            /* border: 1px solid black */
+        }
+        .right-eye:hover{
+            background-color:blue;
+        }
+        .left-ear{
+            width: 5px;
+            height: 40px;
+            float: left;
+            transform: translate(30px, 71px);
+            /* border: 1px solid black; */
+        }
+        .left-ear-1{
+            width: 4px;
+            height: 40px;
+            background-color: #A4CA39;
+            border-radius: 1px;
+            transform: rotate(-30deg);
+            /* border: 1px solid black; */
+        }
+        .right-ear{
+            width: 5px;
+            height: 40px;
+            float: right;
+            transform: translate(-30px, 70px);
+            /* border: 1px solid black; */
+        }
+        .right-ear-1{
+            width: 4px;
+            height: 40px;
+            background-color: #A4CA39;
+            border-radius: 1px;
+            transform: rotate(30deg);
+            /* border: 1px solid black; */
+        }
+        .mid{
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            /* border: 1px solid black; */
+        }
+        .left-hand{
+            width: 20px;
+            height: 100px;
+            float: left;
+            background-color: #A4CA39;
+            border-radius: 10px;
+            transition: transform 2s;
+            /* border: 1px solid black; */
+        }
+        .left-hand:hover{
+            transform:rotate(360deg);
+        }
+        .body{
+            width: 100px;
+            height: 100px;
+            /* margin: auto; */
+            float: left;
+            margin-left: 30px;
+            background-color: #A4CA39;
+            border-radius: 0 0 10px 10px;
+            /* border: 1px solid black; */
+        }
+        .right-hand{
+            width: 20px;
+            height: 100px;
+            float: right;
+            border-radius: 10px;
+            background-color: #A4CA39;
+            transition: transform 2s;
+            /* border: 1px solid black; */
+        }
+        .right-hand:hover{
+            transform:rotate(360deg);
+        }
+        .leg{
+            width: 100px;
+            height: 50px;
+            margin: auto;
+            /* border:1px solid black; */
+        }
+        .left-leg{
+            width: 20px;
+            height: 50px;
+            background-color: #A4CA39;
+            float: left;
+            margin-left: 20px;
+            /* border:1px solid black; */
+        }
+        .right-leg{
+            width: 20px;
+            height: 50px;
+            background-color: #A4CA39;
+            float: right;
+            margin-right: 20px;
+            /* border:1px solid black; */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="left-ear">
+                <div class="left-ear-1">
+                </div>
+            </div>
+            <div class="right-ear">
+                <div class="right-ear-1">
+                </div>
+            </div>
+            <div class="head">
+                <div class="left-eye">
+    
+                </div>
+                <div class="right-eye">
+    
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="left-hand"></div>
+            <div class="body"></div>
+            <div class="right-hand"></div>
+        </div>
+        <div class="leg">
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+        </div>
+    </div>
+</body>
+</html>

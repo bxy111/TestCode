@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<departments>
+    <department>
+        <id>21</id>
+        <name>财务部</name>
+        <manager>lihong</manager>
+    </department>
+    <department>
+        <id>22</id>
+        <name>人事部</name>
+        <manager>awan</manager>
+    </department>
+    <department>
+        <id>25</id>
+        <name>后勤部</name>
+        <manager>wangda</manager>
+    </department>
+    <department>
+        <id>27</id>
+        <name>研发部</name>
+        <manager>chenhon</manager>
+    </department>
+    <department>
+        <id>29</id>
+        <name>总裁办</name>
+        <manager>zongcai</manager>
+    </department>
+</departments>

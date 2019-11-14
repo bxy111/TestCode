@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pets>
+    <pet>
+        <name>huihui</name>
+        <type>dog</type>
+        <color>black</color>
+        <price>200.5</price>
+    </pet>
+    <pet>
+        <name>xiaobai</name>
+        <type>cat</type>
+        <color>yellow</color>
+        <price>550</price>
+    </pet>
+    <pet>
+        <name>panpan</name>
+        <type>dog</type>
+        <color>white</color>
+        <price>280</price>
+    </pet>
+</pets>

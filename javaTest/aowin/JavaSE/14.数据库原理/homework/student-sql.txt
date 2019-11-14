@@ -1,0 +1,26 @@
+-- create table student(
+-- id int(5) primary key,
+-- name varchar(20) not null,
+-- age int(2),
+-- sex varchar(1),
+-- department varchar(20),
+-- class int(2)
+-- );
+
+-- insert into student values(80101, 'zhangsan', 20, '男', 'math', 1);
+-- insert into student values(80102, 'lisi', 21, '男', 'computer', 2);
+-- insert into student values(80103, 'lili', 23, '女', 'computer', 2);
+-- insert into student values(80104, 'wangwu', 21, '男', 'englis', 3);
+-- insert into student values(80105, 'xuli', 22, '女', 'math', 1);
+
+-- delete from student where id=80102;
+-- update student set sex='女';
+-- update student set department='English' where id=80104;
+
+-- select * from student where class=1;
+-- select name from student where department='math';
+-- select id from student where age>21;
+-- select avg(age) from student group by class; 
+-- select * from student where name like '%i%';
+
+-- select * from student where age<(select avg(age) from student where class=1) and class=1;

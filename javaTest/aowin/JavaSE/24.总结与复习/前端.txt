@@ -1,0 +1,121 @@
+1.前端页面有哪三层构成及它们的作用
+html - 页面的内容和结构
+css - 页面的样式（控制页面中标签的显示）
+javascript - 页面的行为（提高页面的交互操作）
+
+2.xhtml和html的区别
+html:超文本标记语言（HyperText Markup Language）
+XHTML：指可扩展超文本标签语言（EXtensible HyperText Markup Language）。
+目标是取代 HTML,与 HTML 4.01 几乎是相同的,是更严格更纯净的 HTML 版本。
+
+最主要的不同：
+XHTML 元素必须被正确地嵌套。 
+XHTML 元素必须被关闭。 
+标签名必须用小写字母。 
+XHTML 文档必须拥有根元素。 
+
+3.Doctype
+html的声明，必须是 HTML 文档的第一行，位于 <html> 标签之前。
+它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。
+
+html4:
+严格版Strict:不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+过渡版Transitional(常用):包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+框架版Frameset:允许框架集内容
+
+html5:
+<!Doctype html>
+
+
+4.行内元素，块级元素，css的盒子模型
+行内元素：元素内容前后不换行，尺寸auto*auto根据内容变化
+块级元素：元素内容前后换行，尺寸宽度100%
+通过css的display属性修改,比如inline行内，block块，inline-block行内块，none隐藏
+
+标记的盒子模型：
+content（内容） - 标记的内容，尺寸width,height
+padding（内补丁） - 标记的内容到边框的距离 padding:10px  padding-left
+border（边框） - 标记的边框  border:solid 1px red;   border-width:1px
+margin（外补丁） - 盒子与盒子之间的间距 
+
+5.html4和html5的区别
+html5是html的第5次重大修改
+舍弃html4中的不常用的标记<font>,<center>等，添加了新的标记
+1.布局变化<header>,<nav>,<section>,<article>,<footer>,<aside>等
+2.新的表单元素type类型url email number等，<datalist>等
+3.新的表单属性placeholder,required,autofocus,autocomplete等 用户名<input type="text"  required/>
+
+6.css的选择器
+标记，id,class,后代，群组,*
+<div>
+	<p id='aa'class="ss"><span></span></p> #aa   .ss    #aa span   #aa,span   p{color:red}
+	<span></span>
+
+</div>
+
+7.css的基本语句构成
+css选择器{属性名称:属性值;属性名称:属性值;属性名称:属性值;...}
+
+常用的css属性：
+字体颜色color,大小font-size,字体样式font-family,粗细font-weight,倾斜font-style
+文字装饰，比如下划线text-decoration
+文本水平对齐text-align
+行高line-height
+
+伪类
+鼠标悬浮在元素上的样式:hover
+
+列表项符号list-style-type 
+列表项使用自定义图片list-style-image
+
+框模型
+内容尺寸width,height
+内补丁 padding padding-top padding-left padding-right padding-bottom
+边框 border border-width border-style border-color
+border-top border-bottom border-left border-right
+外补丁 margin margin-top margin-bottom margin-left margin-right
+
+布局
+浮动float
+清除浮动clear
+元素的显示display 
+
+定位
+position 结合left top bottom right进行定位
+
+背景
+背景颜色 background-color
+背景图片 background-image 
+图片重复 background-repeat 
+图片位置 background-position
+
+8.img标签上title与alt属性的区别是什么？
+title - 当鼠标悬浮在图片上显示
+alt - 当图片不能正常显示时，显示其内容
+
+9.javascript的typeof返回哪些数据类型
+undefined,object,string,boolean,number,function(6种)  var abc=function(){alert}
+
+
+10.数组方法pop() push() unshift() shift()  length
+pop()移除数组最后一个元素
+push()向数组尾部添加元素
+unshift()向数组开头添加元素
+shift()移除数组的第一个元素
+
+11.==与===的不同 != !==
+==判断两个变量的值是否相同  "123"===123  
+===判断两个变量的值是否完全相同（值和类型）
+
+12.css的引入方式
+3种
+1.内部样式表，在<head>标记中添加<style type="text/css"></style>
+2.外部样式表，在<head>标记中添加<link type="text/css" rel="stylesheet" href="样式文件的路径"/>
+3.内联模式,在标记中添加属性style,比如 <p style="color:red"></p>
+
+13.js与Html交互
+事件 onclick  onchange onmoueover onmouseout
+document,location,window
+dom操作 
+select,table
+

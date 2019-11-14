@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #main{
+            margin: auto;
+            width: 600px;
+            height: 600px;
+        }
+        #right{
+            width: 110px;
+            height: 40px;
+            float: right;   
+            transform: translate(-130px,-60px);
+        }
+        #item1{
+            width: 30px;
+            height: 26px;
+            float: left;
+            margin-left: 4px;
+            margin-top: 2px;
+            padding-top: 4px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: large;
+            font-weight: bolder;
+            background-color: white;
+        }
+        #item2{
+            width: 30px;
+            height: 26px;
+            float: left;
+            margin-left: 4px;
+            margin-top: 2px;
+            padding-top: 4px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: large;
+            font-weight: bolder;
+            background-color: white;
+        }
+        #item3{
+            width: 30px;
+            height: 26px;
+            float: left;
+            margin-left: 4px;
+            margin-top: 2px;
+            padding-top: 4px;
+            text-align: center;
+            border-radius: 30px;
+            font-size: large;
+            font-weight: bolder;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+            <img src="img/1.jpg" alt="" id="img" width="500px" height="500px">
+            <div id="right">
+                <div id="item1" onmouseover="onSelect(this)" onmouseout="onLeave()">
+                    <span>1</span>
+                </div>
+                <div id="item2" onmouseover="onSelect(this)" onmouseout="onLeave()">
+                    <span>2</span>
+                </div>
+                <div id="item3" onmouseover="onSelect(this)" onmouseout="onLeave()">
+                    <span>3</span>
+                </div>
+            </div>
+    </div>
+</body>
+<script>
+        var picNum = 0;
+        var t = 0;
+        var itemOldNum = 0;
+
+        function playPic(){
+            var img = document.getElementById("img");
+            var index = picNum++%3 + 1;
+            img.src = "img/"+ index + ".jpg";
+
+            var itemNum = "item" + index;
+
+            var item = document.getElementById(itemNum);
+            if (itemOldNum != 0){
+                var itemOld = document.getElementById(itemOldNum);
+                itemOld.style.backgroundColor = "white";
+                itemOld.style.color = "black";
+            }
+            itemOldNum = itemNum;
+            item.style.backgroundColor = "blue";
+            item.style.color = "red";
+        }
+        function imgTurn(){
+            t = setTimeout("imgTurn()", 1000);
+            playPic();
+        }
+
+        function stopImgTurn(){
+            clearTimeout(t);
+        }
+
+        function omover(){
+            stopImgTurn();
+        }
+
+        function omout(){
+            imgTurn();
+        }
+        function onSelect(obj){
+            stopImgTurn();
+            picNum = parseInt(obj.children[0].innerHTML) - 1;
+            playPic();
+        }
+        function onLeave(){
+            imgTurn();
+        }
+        imgTurn();
+    </script>
+</html>

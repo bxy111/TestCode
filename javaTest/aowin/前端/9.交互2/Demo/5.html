@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #left{
+            width: 600px;
+            height: 400px;
+            float: left;
+            border: 1px solid black;
+        }
+        #tb{
+            width: 500px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        #right{
+            margin-left: 5px;
+            width: 300px;
+            height: 400px;
+            float: left;
+            border: 1px solid black;
+        }
+        #right-bottom{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <table id="tb">
+            <tr>
+                <th><input type="checkbox" value="selectAll">全选</th>
+                <th>姓名</th>
+                <th>地址</th>
+                <th>年龄</th>
+                <th>操作</th>
+            </tr>
+        </table>
+    </div>
+    <div id="right">
+        <form action="">
+            <input type="button" value="添加一行" onclick="onCli(this)">
+            <input type="button" value="删除所选" onclick="onDelSelect()">
+            <div id="right-bottom">
+                <form action="">
+                    姓名：<input type="text" placeholder="必须填写"><br><br>
+                    地址：<input type="text"><br><br>
+                    年龄：<input type="text">
+                </form>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function addLine(itemlist){
+        if (itemlist[0].value == ""){
+            return false;
+        }
+
+        var tb = document.getElementById("tb");
+        var tr = tb.insertRow(-1);
+        var len = tb.getElementsByTagName("th").length;
+        for (var i=0; i<len; i++){
+            if (0 == i){
+                var td = tr.insertCell(-1);
+                td.innerHTML = "<input type='checkbox' value='selectOne'>";
+            }else if (len-1 == i){
+                var td = tr.insertCell(-1);
+                td.innerHTML = "<input type='button' value='删除' onclick='onDel(this)'>";
+            }else{
+                var td = tr.insertCell(-1);
+                td.innerHTML = itemlist[i-1].value;
+                itemlist[i-1].value = null;
+            }
+        }
+        return true;
+    }
+    function onDel(obj){
+        var tb = document.getElementById("tb");
+        tb.deleteRow(obj.parentNode.parentNode.rowIndex);
+    }
+    function onCli(obj){
+        var rbDiv = document.getElementById("right-bottom");
+
+        if (obj.value == "添加一行"){
+            rbDiv.style.display = "block";
+            obj.value = "完成";
+        }else{
+            var itemList = rbDiv.getElementsByTagName("input");
+            if (!addLine(itemList)){
+                return;
+            }
+
+            rbDiv.style.display = "none";
+            obj.value = "添加一行";
+        }
+    }
+</script>
+</html>

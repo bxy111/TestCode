@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.验证整数或者小数（包括正数和负数）1. .1
+        var reg1 = /^-?\d+(\.\d)?\d*$/;
+        console.log(reg1.test("-1.12"));
+
+        // 2.qq号 第一位非0   9位
+        var reg2 = /^[1-9]\d{8}$/;
+        console.log(reg2.test("122121111"));
+
+        // 3.匹配验证码，4位数字或者字母组合 
+        var reg3 = /^[0-9a-zA-Z]{4}$/;
+        console.log(reg3.test("1bN0"));
+
+        // 4.用文字记号组方式创建两个人的对象，有身高，体重，性别，肤色，能吃饭，能睡觉，
+        // 会说话，会学习
+        var personArr = [
+            {
+                height:180,
+                weight:70,
+                sex:"男",
+                color:"yellow",
+                eat:function(){
+                    console.log("我在吃饭。。。");
+                },
+                sleep:function(){
+                    console.log("我在睡觉。。。");
+                },
+                speak:function(){
+                    console.log("你好,我叫小明");
+                },
+                learn:function(){
+                    console.log("我在学习。。。");
+                }
+            },
+            {
+                height:165,
+                weight:60,
+                sex:"女",
+                color:"yellow",
+                eat:function(){
+                    console.log("我在吃饭。。。");
+                },
+                sleep:function(){
+                    console.log("我在睡觉。。。");
+                },
+                speak:function(){
+                    console.log("你好，我叫小红");
+                },
+                learn:function(){
+                    console.log("我在学习。。。");
+                }
+            }
+        ];
+        personArr[0].speak();
+        personArr[1].speak();
+
+        // 5.构造函数方式创建对象,狗
+        function Dog(name, sex){
+            this.name = name;
+            this.sex = sex;
+        }
+        Dog.prototype.bark = function(){
+            console.log("my name is " + this.name + ", my sex is " + this.sex);
+        }
+        var dog = new Dog("二哈", "公");
+        dog.bark();
+        // console.log(typeof(dog.bark));
+        // console.log(typeof(dog));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

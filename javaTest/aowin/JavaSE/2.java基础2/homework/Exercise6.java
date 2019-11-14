@@ -1,0 +1,20 @@
+public class Exercise6 {
+    public static void main(String[] args) {
+//        6.定义一个一维数组和二维数组，分别进行遍历。
+        int[] num = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i]+" ");
+        }
+        System.out.println();
+        System.out.println();
+
+        int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}

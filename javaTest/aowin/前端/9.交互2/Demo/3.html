@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        function setAllItemSelected(items){
+            for (var i=0; i<items.length; i++){
+                items[i].checked = true;
+            }
+        }
+        function setAllItemNotSelect(items){
+            for (var i=0; i<items.length; i++){
+                items[i].checked = false;
+            }
+        }
+        function isAllSelected(){
+            var items = document.getElementsByClassName("item");
+            for (var i=0; i<items.length; i++){
+                if (!items[i].checked){
+                    return false;
+                }
+            }
+            return true;
+        }
+        function onclickAll(obj){
+            var items = document.getElementsByClassName("item");
+            if (obj.checked){
+                setAllItemSelected(items);
+            }else{
+                setAllItemNotSelect(items);
+            }
+        }
+        function oncli(){
+            var allse = document.getElementById("all");
+            if (isAllSelected()){
+                allse.checked = true;
+            }else{
+                allse.checked = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul> 
+        <li>全选<input type="checkbox" id="all" onclick="onclickAll(this)"></li>
+        <li>选项1<input type="checkbox" class="item" onclick="oncli()"></li>
+        <li>选项2<input type="checkbox" class="item" onclick="oncli()"></li>
+        <li>选项3<input type="checkbox" class="item" onclick="oncli()"></li>
+        <li>选项4<input type="checkbox" class="item" onclick="oncli()"></li>
+    </ul>
+</body>
+</html>

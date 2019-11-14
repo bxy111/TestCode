@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 判断是否是质数
+        // function isZhiShu(num){
+        //     i = 2;
+        //     while (i < num){
+        //         if (num % i == 0){
+        //             return false;
+        //         }
+        //         i++;
+        //     }
+        //     return true;
+        // }
+        // alert(isZhiShu(17));
+        // 四舍五入
+        // console.log(Math.round(4.4));
+        // console.log(Math.floor(5.1));
+        // console.log(Math.ceil(5.1));
+        // i = 0;
+        // while (i < 1000){
+        //     j = 0;
+        //     console.log(parseInt(Math.random()*11) + 50);
+        //     i++;
+        // }
+        // 数组
+        // var a = new Array();
+        // a.push(1);
+        // a.push("xiaohong");
+        // a.push(true);
+        // a.push(6.4234325);
+        // a.push(100);
+        // a.push("hello world  ");
+        
+        // console.log(a.length);
+        // for(i=0; i<a.length; i++){
+        //     console.log(a[i]);
+        // }
+        // console.log(a.join());
+        //字符串
+        // var s = "asfsaf safsadfasf fassdaf fasf   ";
+        // console.log(s.length);
+        // console.log(s.charAt(3));
+        
+        // 对象 名称首字母需要大写
+        function Cat(name, age, color){
+            this.name = name;
+            this.age = age;
+            this.color = color;
+        }
+        Cat.prototype.bark = function(){
+            console.log("喵喵。。。")
+        }
+        Cat.prototype.show = function(){
+            console.log(this.name + " " + this.age + " " + this.color);
+        }
+
+        var cat = new Cat("mimi", 2, "橘色");
+        cat.bark();
+        cat.show();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

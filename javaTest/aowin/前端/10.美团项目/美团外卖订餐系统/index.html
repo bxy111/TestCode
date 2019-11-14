@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1200px;
+            height: 1000px;
+            background-color: #CED2D7;
+            /* border: 1px solid black; */
+        }
+        #title{
+            width: 100%; 
+            height: 5%;
+            background-color: #FFD705;
+            border: 1px solid #FFD705;
+        }
+        #title-logo{
+            width: 30%; 
+            height: 95%;
+            margin-left: 70px;
+            margin-top: 6px;
+            /* border: 1px solid black; */
+        }
+        #shoppingCart{
+            width: 100%; 
+            height: 5%;
+            text-align: center;
+            /* border: 1px solid black; */
+        }
+        #shoppingCart-a{
+            text-decoration-line: none;
+            color: blue;
+        }
+        #shoppingCart-span{
+            color:red;
+        }
+        #foodPic{
+            width: 90%; 
+            height: 80%;
+            margin: auto;
+            margin-top: 5px;
+            background-color: white;
+            /* border: 1px solid black; */
+        }
+        #picItem{
+            width: 23%; 
+            height: 48%;
+            margin-top: 10px;
+            margin-left: 16px;
+            float: left;
+            /* border: 1px solid black; */
+        }
+        .pic-table-2{
+            font-size: smaller;
+            color: #FFC251;
+        }
+        .pic-table-3{
+            font-size: smaller;
+            color: #D7D7D7;
+        }
+        #tableList{
+            width: 90%; 
+            height: 40%;
+            margin: auto;
+            margin-top: 5px;
+            display: none;
+            background-color: white;
+            /* border: 1px solid black; */
+        }
+        .table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        .table-th{
+            background-color: #B5E0FF;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        #underTable{
+            width: 100%;
+            height: 10%;
+            border-top:3px solid #E1E1E1;
+            /* border: 1px solid black; */
+        }
+        #underTable-left{
+            width: 40%;
+            height: 75%;
+            float: left;
+            margin-top: 8px;
+            /* border: 1px solid black; */
+        }
+        #underTable-right{
+            width: 40%;
+            height: 75%;
+            float: right;
+            color: red;
+            text-align: right;
+            margin-top: 8px;
+            /* border: 1px solid black; */
+        }
+        .linkBottom{
+            color: blue;
+            font-size:large;
+            font-weight: bolder;
+            text-decoration-line: none;
+        }
+        #empty{
+            width: 100%; 
+            height: 20%;
+            display: none;
+            /* border: 1px solid black; */
+        }
+        #empty-ele{
+            width: 50%; 
+            height: 80%;
+            color: red;
+            font-size: xx-large;
+            text-align: center;
+            margin: auto;
+            margin-top:10px;
+            /* border: 1px solid black; */
+        }
+        #numInput{
+            width: 30px; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <div id="title-logo">
+            <img src="img/ceiling-logo2.png" alt="">
+        </div>
+    </div>
+    <div id="shoppingCart">
+        <h3><a id="shoppingCart-a" href="#" onclick="toTableList()">我的购物车(<span id="shoppingCart-span">0</span>)</a></h3>
+    </div>
+    <div id="foodPic">
+        <div id="picItem">
+            <img src="img/1.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>A米汉堡</td>
+                    <td></td>
+                    <td align="right">16元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销8148单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥10</td>
+                    <td>免费配送</td>
+                    <td align="right">45分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/2.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>杨记小厨</td>
+                    <td></td>
+                    <td align="right">17.5元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销4639单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥10</td>
+                    <td>免费配送</td>
+                    <td align="right">38分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/3.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td colspan="2">杨铭宇黄焖鸡米饭</td>
+                    <td align="right">18元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销2571单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥10</td>
+                    <td>免费配送</td>
+                    <td align="right">25分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/4.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>烤肉拌饭</td>
+                    <td></td>
+                    <td align="right">18元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销2347单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥0</td>
+                    <td>免费配送</td>
+                    <td align="right">29分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/5.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>老王烧烤</td>
+                    <td></td>
+                    <td align="right">15元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销8866单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥10</td>
+                    <td>免费配送</td>
+                    <td align="right">30分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/6.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>小杨生煎</td>
+                    <td></td>
+                    <td align="right">20元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销5566单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥20</td>
+                    <td>免费配送</td>
+                    <td align="right">40分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/7.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>云三郎</td>
+                    <td></td>
+                    <td align="right">16元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销2389单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥15</td>
+                    <td>免费配送</td>
+                    <td align="right">20分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="picItem">
+            <img src="img/8.jpg" alt="" width="100%" height="60%">
+            <table width="100%">
+                <tr>
+                    <td>东北盖饭</td>
+                    <td></td>
+                    <td align="right">15元/份</td>
+                </tr>
+                <tr class="pic-table-2">
+                    <td></td>
+                    <td></td>
+                    <td align="right">月销3100单</td>
+                </tr>
+                <tr class="pic-table-3">
+                    <td>起送￥15</td>
+                    <td>免费配送</td>
+                    <td align="right">20分钟</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td align="right"><input type="button" value="加入购物车" onclick="joinShoppingCart(this)"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="tableList">
+        <table class="table" id="table-id">
+            <tr class="table-th">
+                <th>全选<input type="checkbox" name="" id="allSelect" onclick="selectAll(this)"></th>
+                <th>菜品</th>
+                <th>价格（元/份）</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+        </table>
+        <div id="underTable">
+            <div id="underTable-left">
+                <form action="">
+                    <input type="button" value="全部删除" disabled="true" id="allDel" onclick="delAllOrder()">
+                </form>
+            </div>
+            <div id="underTable-right">
+                合计￥<span id="total">0.0</span>
+                <input id="payButton" type="button" value="结算" style="background-color: #FFD705" onclick="payment()">
+            </div>
+        </div>
+        <div id="empty">
+            <div id="empty-ele">
+                购物车空了！
+            </div>
+        </div>
+        <a href="#" class="linkBottom" onclick="continueOrder()">继续任性点餐</a>
+    </div>
+</body>
+<script>
+    function payment(){
+        var total = document.getElementById("total");
+        var tb = document.getElementById("table-id");
+        alert("已支付：" + total.innerHTML + "元");
+        for (var i=tb.rows.length-1; i>0; i--){
+            if (tb.rows[i].cells[0].children[0].checked == true){
+                tb.deleteRow(tb.rows[i].rowIndex)
+            }
+        }
+        refreshNum();
+        refreshSelected();
+        refreshTotal();
+    }
+    function delAllOrder(){
+        var tb = document.getElementById("table-id");
+        while (1 < tb.rows.length){
+            tb.deleteRow(tb.rows[1].rowIndex);
+        }
+        refreshNum();
+        refreshSelected();
+        refreshTotal();
+    }
+    function refreshNum(){
+        var tb = document.getElementById("table-id");
+        var span = document.getElementById("shoppingCart-span");
+        var sum = 0;
+        for (var i=1; i<tb.rows.length; i++){
+            sum += parseInt(tb.rows[i].cells[3].children[1].value);
+        }
+        span.innerHTML = sum;
+
+        var emp = document.getElementById("empty");
+        if (0 == sum){
+            emp.style.display = "block";
+        }else{
+            emp.style.display = "none";
+        }
+    }
+    function addItem(obj){
+        var num = obj.parentNode.children[1].value;
+        obj.parentNode.children[1].value = parseInt(num) + 1;
+        refreshNum();
+        refreshTotal();
+    }
+    function minusItem(obj){
+        var num = obj.parentNode.children[1].value;
+        if (1 == num){
+            delItem(obj);
+        }else{
+            obj.parentNode.children[1].value = parseInt(num) - 1;
+            refreshNum();
+            refreshTotal();
+        }
+    }
+    function delItem(obj){
+        var tb = document.getElementById("table-id");
+        tb.deleteRow(obj.parentNode.parentNode.rowIndex);
+        refreshNum();
+        refreshSelected();
+        refreshTotal();
+    }
+    function selectItem(){
+        refreshSelected();
+        refreshTotal();
+    }
+    function refreshTotal(){
+        var total = document.getElementById("total");
+        var tb = document.getElementById("table-id");
+        var sum = 0;
+        for (var i=1; i<tb.rows.length; i++){
+            if (tb.rows[i].cells[0].children[0].checked == true){
+                // 计算勾选上的订单的总价格
+                sum += tb.rows[i].cells[2].innerHTML * tb.rows[i].cells[3].children[1].value;
+            }
+        }
+        total.innerHTML = sum;
+        var button = document.getElementById("payButton");
+        if (0 == sum){
+            button.disabled = true;
+        }else{
+            button.disabled = false;
+        }
+    }
+    function disableAllDel(){
+        // 禁用全部删除
+        var ad = document.getElementById("allDel");
+        ad.disabled = true;
+        // 去掉全选标志
+        var ad = document.getElementById("allSelect");
+        ad.checked = false;
+    }
+    function enableAllDel(){
+        // 使能全部删除
+        var ad = document.getElementById("allDel");
+        ad.disabled = false;
+        // 勾上全选标志
+        var ad = document.getElementById("allSelect");
+        ad.checked = true;
+    }
+    function refreshSelected(){
+        var tb = document.getElementById("table-id");
+        var isAllSelected = true;
+        var isNotEmpty = false;
+        for (var i=1; i<tb.rows.length; i++){
+            isNotEmpty = true;
+            if (!tb.rows[i].cells[0].children[0].checked){
+                isAllSelected = false;
+                break;
+            }
+        }
+        if (isNotEmpty && isAllSelected){
+            enableAllDel();
+        }else{
+            disableAllDel();
+        }
+    }
+    function selectAll(obj){
+        var tb = document.getElementById("table-id");
+        if (obj.checked){
+            // 将订单全部勾选上
+            for (var i=1; i<tb.rows.length; i++){
+                tb.rows[i].cells[0].children[0].checked = true;
+            }
+        }else{
+            // 去掉所有订单的勾选
+            for (var i=1; i<tb.rows.length; i++){
+                tb.rows[i].cells[0].children[0].checked = false;
+            }
+        }
+        // 更新条目选择框
+        refreshSelected();
+        // 更新总价
+        refreshTotal();
+    }
+    function isExistFood(food){
+        var tb = document.getElementById("table-id");
+        for (var i=1; i<tb.rows.length; i++){
+            if (tb.rows[i].cells[1].innerHTML == food){
+                return tb.rows[i].cells[3].children[1];
+            }
+        }
+        return null;
+    }
+    function modifyNum(obj){
+        if (0 == obj.value){
+            delItem(obj);
+        }else{
+            refreshNum();
+            refreshTotal();
+        }
+    }
+    function addLineToTable(food, price){
+        var tb = document.getElementById("table-id");
+        // 先判断需要添加的物品，在表格中是否已经存在
+        var index = isExistFood(food);
+        if (index != null){
+            // 物品已经存在，需要增加数量
+            index.value = parseInt(index.value) + 1;
+            refreshNum();
+            refreshTotal();
+        }else{
+            // 新增条目
+            var tr = tb.insertRow(-1);
+            var td1 = tr.insertCell(-1);
+            td1.innerHTML = "<input type='checkbox' onclick='selectItem()'>";
+            var td2 = tr.insertCell(-1);
+            td2.innerHTML = food;
+            var td3 = tr.insertCell(-1);
+            td3.innerHTML = price;
+            var td4 = tr.insertCell(-1);
+            td4.innerHTML = "<input type='button' value='-' onclick='minusItem(this)'>\
+                            <input id='numInput' type='text' value='1' onchange='modifyNum(this)'>\
+                            <input type='button' value='+' onclick='addItem(this)'>";
+            var td5 = tr.insertCell(-1);
+            td5.innerHTML = "<input type='button' value='删除' onclick='delItem(this)'>";
+            refreshNum();
+            // 更新条目选择框
+            refreshSelected();
+        }
+    }
+    function joinShoppingCart(obj){
+        // 向表格中添加行
+        var food = obj.parentNode.parentNode.parentNode.children[0].children[0].innerHTML;
+        var price = 0;
+        if (food == "杨铭宇黄焖鸡米饭"){
+            price = parseFloat(obj.parentNode.parentNode.parentNode.children[0].children[1].innerHTML);
+        }else{
+            price = parseFloat(obj.parentNode.parentNode.parentNode.children[0].children[2].innerHTML);
+        }
+        addLineToTable(food, price);
+    }
+    function continueOrder(){
+        var foodPic = document.getElementById("foodPic");
+        var tableList = document.getElementById("tableList");
+
+        foodPic.style.display = "block";
+        tableList.style.display = "none";
+    }
+    function toTableList(){
+        var foodPic = document.getElementById("foodPic");
+        var tableList = document.getElementById("tableList");
+        foodPic.style.display = "none";
+        tableList.style.display = "block";
+        refreshNum();
+        refreshTotal();
+    }
+</script>
+</html>

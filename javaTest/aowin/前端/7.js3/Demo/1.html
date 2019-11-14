@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function Car(color, brand, price, drive){
+            this.color = color;
+            this.brand = brand;
+            this.price = price;
+            this.drive = drive; //方法
+        }
+        // Car.prototype.drive = function(){
+        //     console.log("开车中。。。");
+        // }
+        // function drive(){
+        //     console.log("我在开车");
+        // }
+        // var c = new Car("red", "benz", 100000, drive);
+        // c.drive();
+
+        // var c1 = {
+        //     color:"green",
+        //     brand:"bmw",
+        //     price:10000,
+        //     drive:function(){
+        //         console.log("正在开车");
+        //     }
+        // }
+        // c1.drive();
+        // var reg = /^aaab*c+d*$/
+        // // var flag = reg.test("aaabbbcccd");
+        // // var flag = reg.test("aaabbc");
+        // var flag = reg.test("aaac");
+        // alert(flag);
+        // var reg = /^\w*\W+\w*$/;
+        // var flag1 = reg.test("idnfduf233---__");
+        // var flag2 = reg.test("233-");
+        // var flag3 = reg.test("343dfdnf__");
+        // alert(flag1 + " " + flag2 + " " + flag3);
+        // var reg = /^\w{6,12}@\d{2,4}\.com$/;
+        // var flag = reg.test("test12@16322.com");
+        // alert(flag);
+        // var reg = /^(\d{1,3}\.){3}\d{1,3}/;
+        // var flag = reg.test("255.255.255.0");
+        // alert(flag);
+        // var reg = /^1[35678]\d{9}/;
+        // var flag = reg.test("12374387436");
+        // alert(flag);
+        // var reg = /^([a-z]|[A-Z])\.com$/
+        // var flag = reg.test("a.com");
+        // alert(flag);
+        var str = "afsafdas afdsfas safasfads fdfssa";
+        var strArr = str.split(/af/);
+        alert(strArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

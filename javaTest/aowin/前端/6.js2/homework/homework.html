@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.封装函数，判断某一年是否是闰年
+        function isLeapYear(year){
+            if (((year%100 != 0)&&(year%4 == 0)) || year%400 == 0){
+                return true;
+            }
+            return false;
+        }
+        console.log(isLeapYear(2020));
+
+        // 3.创建一个函数Person用来定义人这类事物，有身高，体重，性别，肤色，能吃饭，能睡觉，会说话，会学习
+        function Person(){
+        }
+        var per = new Person();
+        per.height = 180;
+        per.weight = 70;
+        per.sex = "男";
+        per.color = "黄";
+        per.eat = function(){
+            console.log("吃饭中。。。");
+        };
+        per.sleep = function(){
+            console.log("睡觉中。。。");
+        };
+        per.speak = function(){
+            console.log("你好。");
+        };
+        per.learn = function(){
+            console.log("学习中。。。");
+        };
+        per.eat();
+        per.learn();
+        per.sleep();
+        per.speak();
+
+        // 4.创建一个数组,求出数组中的最大值和最小值
+        function findMaxMin(array){
+            var max = array[0];
+            var min = array[0];
+            var i = 1;
+            while (i < array.length){
+                if (array[i] > max){
+                    max = array[i];
+                }
+                if (array[i] < min){
+                    min = array[i];
+                }
+                i++;
+            }
+            console.log("最大值 " + max + " 最小值 " + min);
+        }
+        var array = [88,34,2,8,0,90,100];
+        findMaxMin(array);
+
+        // 5.求出1-200内的质数,并存放到指定长度的数组中(数组的长度要和质数的个数相同)
+        function isPrimeNum(num){
+            if (num == 1){
+                return false;
+            }
+            var i = 2;
+            while (i <= Math.sqrt(num)){
+                if (num % i == 0){
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+        function findAllPrimeNum(start, end){
+            var arr = new Array();
+            var i = start;
+            while (i <= end){
+                if (isPrimeNum(i)){
+                    arr.push(i);
+                }
+                i++;
+            }
+            return arr;
+        }        
+
+        var ret = findAllPrimeNum(1, 200);
+        var dst = new Array(ret.length);
+        for (var i=0; i<dst.length; i++){
+            dst[i] = ret[i];
+        }
+        console.log(dst.length);
+        console.log(dst.join());
+
+        // 6.生成10个20-50内的随机数,并存放到数组中
+        function generateRandom(start, end, num){
+            var random = new Array();
+            for (var i = 0; i < num; i++){
+                random.push(parseInt(Math.random()*(end - start + 1)) + start);
+            }
+            return random;
+        }
+        console.log(generateRandom(20, 50, 10).join());
+    </script>
+</head>
+<body>
+</body>
+</html>
