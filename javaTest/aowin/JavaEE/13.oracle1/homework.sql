@@ -1,0 +1,64 @@
+-- 1.使用简单查询语句显示：
+-- （1）所有部门名称；
+-- select dname from dept;
+-- （2）所有雇员名及全年收入（工资*12+补助），并指定列别名“年收入”；
+-- select ename, sal*12+nvl(comm, 0) 年收入 from emp;
+-- （3）存在雇员的所有部门号
+-- select distinct deptno from emp;
+-- 2.限制查询数据显示：
+-- （1）工资超过2850的雇员姓名和工资
+-- select ename, sal from emp where sal>2850;
+-- （2）工资不在1500到2850之间的所有雇员名及工资；
+-- select ename, sal from emp where sal not between 1500 and 2850;
+-- （3）代码为7566的雇员姓名及所在部门代码；
+-- select ename, deptno from emp where empno=7566;
+-- （4）部门10和30中工资超过1500的雇员名及工资；
+-- select ename, sal from emp where sal>1500 and deptno in (10, 30);
+-- （5）无管理者的雇员名及岗位；
+-- select ename, job from emp where mgr is null;
+-- 3.使用排序数据的方法显示
+-- （1）在1981年2月1日~1981年5月1日之间雇员的雇员名、岗位及雇佣日期，并以雇佣日期的先后进行排序。
+-- select ename, job, hiredate from emp where hiredate between to_date('1981-02-01','yyyy-MM-dd') and to_date('1981-05-01','yyyy-MM-dd') order by hiredate;
+-- （2）获得补助的所有雇员名、工资及补助额，并以工资和补助的降序排列。
+-- select ename, sal, comm from emp where comm is not null order by sal desc,comm desc;
+-- 4.使用分组函数和数据分组字句显示
+-- （1）所有雇员的平均工资、总计工资、最高工资、最低工资。
+-- select avg(sal), sum(sal), max(sal), min(sal) from emp;
+-- （2）每种岗位的雇员总数、平均工资。
+-- select count(*), avg(sal),job from emp group by job;
+-- （3）雇员总数，以及获得补助的雇员数。
+-- select count(*), count(comm)from emp;
+-- （4）管理者的总人数。
+-- select count(distinct mgr) from emp;
+-- （5）雇员工资的最大差额。
+-- select max(sal)-min(sal) from emp;
+-- 5.使用连接查询方法显示
+-- （1）部门20的部门名，以及该部门所有雇员名、雇员工资及岗位
+-- select dname, ename, sal, job from dept, emp where emp.deptno=20 and emp.deptno=dept.deptno;
+-- （2）获得补助的所有雇员名、补助额以及所在部门名
+-- select ename, comm, dname from emp, dept where comm is not null and emp.deptno=dept.deptno;
+-- （3）在“DALLAS”工作的所有雇员名、雇员工资以及所在的部门名
+-- select ename, sal, dname from emp, dept where dept.loc='DALLAS' and dept.deptno=emp.deptno;
+-- （4）雇员SCOTT的管理者名
+-- select e2.* from emp e1, emp e2 where e1.ename='SCOTT' and e1.mgr=e2.empno;
+-- （5）查询EMP表和SALGRADE表，显示部门20的雇员名、工资及工资级别。
+-- select ename, sal, grade from emp, salgrade where deptno=20 and sal between losal and hisal;
+-- （6）部门10的所有雇员名、部门名，以及其他部门名。
+-- select ename, dname from emp right join dept on emp.deptno=10 and emp.deptno=dept.deptno;
+-- （7）部门10的所有雇员名、部门名，以及其他雇员名。
+-- select ename, dname from emp left join dept on emp.deptno=10 and emp.deptno=dept.deptno;
+-- （8）部门10的所有雇员名、部门名，以及其他部门名和雇员名。
+-- select ename, dname from emp, dept where emp.deptno=dept.deptno and emp.deptno=10
+-- union all
+-- select ename, dname from emp, dept where emp.deptno=dept.deptno and emp.deptno!=10;
+-- 6.使用子查询显示
+-- （1）BLAKE同部门的所有雇员，但不显示BLAKE。
+-- select ename from emp where deptno=(select deptno from emp where ename='BLAKE') and ename!='BLAKE';
+-- （2）超过平均工资的所有雇员名、工资及部门号。
+-- select ename, sal, deptno from emp where sal>(select avg(sal) from emp);
+-- （3）超过部门平均工资的所有雇员名、工资及部门号。
+-- select ename, sal, emp.deptno from emp,(select avg(sal) avgsal, deptno from emp group by deptno) tmp where emp.deptno=tmp.deptno and emp.sal>tmp.avgsal;
+-- （4）高于CLERK岗位所有雇员工资的所有雇员名、工资及岗位。
+-- select ename, sal, job from emp where sal>(select max(sal) from emp where job='CLERK');
+-- （5）工资、补助额与SCOTT完全一致的所有雇员名、工资及补助额。
+-- select emp.ename, emp.sal, comm from emp, (select sal, comm commtmp from emp where ename='SCOTT') tmp where emp.sal=tmp.sal and nvl(emp.comm, 0)=nvl(tmp.commtmp,0);

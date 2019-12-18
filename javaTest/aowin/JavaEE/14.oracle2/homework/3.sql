@@ -1,0 +1,5 @@
+-- 写sql语句，找到学生个数大于3个的班级id、该班级所有学生id、学生名称、班级学生个数 
+-- select tmp.classid, stunum, stuid, stuname from (select count(*) stunum, classid from stu group by classid) tmp, stu where tmp.stunum>3 and tmp.classid=stu.classid
+-- 写sql语句，找到学生个数大于3个的班级id、班级名称、该班级所有学生id、学生名称、班级学生数
+-- select tmp.classid, classname, stunum, stuid, stuname from (select count(*) stunum, classid from stu group by classid) tmp, stu, class 
+-- where tmp.stunum>3 and tmp.classid=stu.classid and tmp.classid=class.classid;

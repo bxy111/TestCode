@@ -1,0 +1,11 @@
+-- 查询小明所选的所有课程的成绩
+-- select score from score,student where name='小明' and student.stuid=score.stuid;
+-- 查询小明所有不及格的课程
+-- select cname from course,score,student where student.name='小明' and student.stuid=score.stuid and score.score < 60 and score.cno=course.cno;
+-- 查询所有不及格课程有两门以上的学生的姓名以及不及格课程数。(分组查询)
+-- select name, failNum from student, (select count(*) failNum,stuid from score where score < 60 group by stuid) tmp 
+-- where tmp.stuid=student.stuid and tmp.failNum >= 2;
+-- 对所有学生英语课成绩从高到低排序
+-- select score from score,course where course.cname='英语' and course.cno=score.cno order by score;
+-- 查询英语课的最高成绩，最低成绩，以及平均成绩
+-- select max(score), min(score), avg(score) from score,course where course.cname='英语' and course.cno=score.cno;

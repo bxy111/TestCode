@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>filter_use</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 过滤器配置 -->
+  <!-- 1.注册 -->
+  <filter>
+  	<filter-name>my</filter-name>
+  	<filter-class>com.aowin.filter.MyFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>second</filter-name>
+  	<filter-class>com.aowin.filter.SecondFilter</filter-class>
+  </filter>
+  
+  
+  
+  
+  <!-- 2.映射路径 :路径是过滤器需要过滤的资源路径（已经存在的路径）-->
+  <!-- <filter-mapping>
+  	<filter-name>second</filter-name>
+  	<url-pattern>/index.jsp</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- 1.url第一种写法：要过滤的具体资源的路径 -->
+  <!-- <filter-mapping>
+  	<filter-name>my</filter-name>
+  	<url-pattern>/index.jsp</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>my</filter-name>
+  	<url-pattern>/other.jsp</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- 2.url的第二种写法：过滤以某种路径结尾的一类资源 -->
+  <!-- <filter-mapping>
+  	<filter-name>my</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping> -->
+  
+  <!-- 3.url的 第三种写法：过滤路径中包含某一级路径下的所有资源  -->
+  <filter-mapping>
+  	<filter-name>my</filter-name>
+  	<url-pattern>/abc/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 4.url的第四种写法：过滤当前工程下所有资源 -->
+  <filter-mapping>
+  	<filter-name>my</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+</web-app>

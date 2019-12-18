@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>servlet_startup</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>my</servlet-name>
+  	<servlet-class>com.aowin.servlet.MyServlet</servlet-class>
+  	<!-- servlet的启动方式
+  		load-on-startup标签内容必须是整数
+  		负整数：默认第一次访问时创建servlet
+  		正整数或0：在服务器启动时创建servlet  值越下优先级越高 对象越先创建
+  	 -->
+  	<load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>my</servlet-name>
+  	<url-pattern>/my</url-pattern>
+  </servlet-mapping>
+</web-app>

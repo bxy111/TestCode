@@ -1,0 +1,93 @@
+servlet:
+	运行在服务器端，以多线程的方式来处理客户端请求的小程序
+
+
+创建三种方式：
+	1.implements Servlet -->重写方法init() destroy() service(ServletRequest request,response)
+	2.extends GenericServlet --> 重写service()
+	3.extends HttpServlet  --> 重写doGet(HttpServletRequest,HttpServletResponse)  doPost()
+
+	
+	配置servlet(映射一个url)
+	<servlet>:注册 <servlet-name>  <servlet-class>
+ 	<servlet-mapping> 映射url  <servlet-name>  <url-pattern>/       /-->http://localhost:8080/工程发布路径
+
+
+请求参数的获取
+	1.request.getParameter（String）:参数名对应一个参数值
+	2.request.getParameterValues(String)：参数名对应多个参数值  复选框
+	3.reuqest.getParameterMap()：一次性全部获取 Entry<String,String[]>
+
+
+	jdbc
+
+	
+
+响应
+	响应普通文本
+	PritnWriter out = response.getWriter();
+	out.print("hello")
+	out.print("<html>")
+	out.flush()
+	out.close()
+
+
+生命周期：
+创建：在客户端第一次访问servlet的url由容器创建servlet对象 init()初始化
+运行：所有的请求都由该对象来进行处理
+销毁：在服务器关闭时销毁servlet 销毁前调用destroy（）    移除工程也会
+
+
+
+
+servlet对象的创建：
+<load-on-startup> :整数  正整数或0则服务器会在启动时创建对象
+
+
+get和post的区别：1.请求参数的提交方式  2.安全性  3.请求参数个数限制  4.调用的方法
+
+
+解决乱码：
+post: request.setCharacterEncoding()
+get: server.xml --> <Connector  URIEnoding="">
+
+
+response.setCharacterEncoding()
+reponse.setContentType("text/html;charset=utf-8")
+out.print("<html>")
+
+
+
+跳转（响应已经存在的页面）
+
+服务器端跳转  一次请求 地址栏不变  getRequestDispatcher().forword()    web.xml 和服务器端跳转/包含工程路径
+
+客户端跳转  两次请求  地址栏改变   sendRedirect()     <form action="/工程路径/logServlet" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

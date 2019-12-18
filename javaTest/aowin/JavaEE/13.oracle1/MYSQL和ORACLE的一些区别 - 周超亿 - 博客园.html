@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://www.cnblogs.com/zhouchaoyi/articles/1727678.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/ca-pub-4210569241504288.js.下载"></script><script type="text/javascript" src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/encoder.js.下载"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MYSQL和ORACLE的一些区别 - 周超亿 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/bundle-summerGarden.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/bundle-summerGarden-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/zhouchaoyi/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/zhouchaoyi/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/zhouchaoyi/wlwmanifest.xml">
+<script src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'zhouchaoyi', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/zhouchaoyi/"><img id="blogLogo" src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/zhouchaoyi/">周超亿-IT交流</a></h1>
+<h2>JS .Net Flex java学习</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+	<li></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/zhouchaoyi/">首页</a></li>
+	<li><a href="http://news.cnblogs.com/">新闻</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/%E5%91%A8%E8%B6%85%E4%BA%BF">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/zhouchaoyi/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/zhouchaoyi/rss"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/xml.gif" alt="订阅"></a></li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔- 28&nbsp;
+文章- 25&nbsp;
+评论- 23&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html">MYSQL和ORACLE的一些区别</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p style="margin: 0mm 0mm 0pt; text-indent: 21pt;"><span style="color: #464646;">有很多</span><span style="color: #464646;">应</span><span style="color: #464646;">用</span><span style="color: #464646;">项</span><span style="color: #464646;">目</span><span style="color: #464646;">, </span><span style="color: #464646;">刚</span><span style="color: #464646;">起</span><span style="color: #464646;">步</span><span style="color: #464646;">的</span><span style="color: #464646;">时</span><span style="color: #464646;">候用</span><span style="color: #464646;">MYSQL</span><span style="color: #464646;"><span style="color: #3366ff;">数据</span><span style="color: #3366ff;">库</span></span><span style="color: #464646;">基本上能</span><span style="color: #464646;">实现</span><span style="color: #464646;">各</span><span style="color: #464646;">种</span><span style="color: #464646;">功能需求，随着</span><span style="color: #464646;">应</span><span style="color: #464646;">用用</span><span style="color: #464646;">户</span><span style="color: #464646;">的增多，数据量的增加，</span><span style="color: #464646;">MYSQL</span><span style="color: #464646;">渐渐</span><span style="color: #464646;">地出</span><span style="color: #464646;">现</span><span style="color: #464646;">不堪重</span><span style="color: #464646;">负</span><span style="color: #464646;">的情况：</span><span style="color: #464646;">连</span><span style="color: #464646;">接很慢甚至宕机，于是就有把数据从</span><span style="color: #464646;">MYSQL</span><span style="color: #464646;">迁到</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">的需求，</span><span style="color: #464646;">应</span><span style="color: #464646;">用程序也要相</span><span style="color: #464646;">应</span><span style="color: #464646;">做一些修改。</span><span style="color: #464646;">总结</span><span style="color: #464646;">出以下几点注意事</span><span style="color: #464646;">项</span><span style="color: #464646;">。</span><span style="color: #464646;"><br><br><strong><span>1</span></strong></span><strong><span style="color: #464646;">．</span></strong><strong><span style="color: #464646;"> </span></strong><strong><span style="color: #464646;">自</span></strong><strong><span style="color: #464646;">动</span></strong><strong><span style="color: #464646;">增</span></strong><strong><span style="color: #464646;">长</span></strong><strong><span style="color: #464646;">的数据</span></strong><strong><span style="color: #464646;">类</span></strong><strong><span style="color: #464646;">型</span></strong><strong><span style="color: #464646;"><span style="color: #3366ff;">处</span><span style="color: #3366ff;">理</span></span></strong><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL</span><span style="color: #464646;">有自</span><span style="color: #464646;">动</span><span style="color: #464646;">增</span><span style="color: #464646;">长</span><span style="color: #464646;">的数据</span><span style="color: #464646;">类</span><span style="color: #464646;">型，插入</span><span style="color: #464646;">记录时</span><span style="color: #464646;">不用操作此字段，会自</span><span style="color: #464646;">动获</span><span style="color: #464646;">得数据</span><span style="color: #464646;">值</span><span style="color: #464646;">。</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">没有自</span><span style="color: #464646;">动</span><span style="color: #464646;">增</span><span style="color: #464646;">长</span><span style="color: #464646;">的数据</span><span style="color: #464646;">类</span><span style="color: #464646;">型，需要建立一个自</span><span style="color: #464646;">动</span><span style="color: #464646;">增</span><span style="color: #464646;">长</span><span style="color: #464646;">的序列号，插入</span><span style="color: #464646;">记录时</span><span style="color: #464646;">要把序列号的下一个</span><span style="color: #464646;">值赋</span><span style="color: #464646;">于此字段。</span><span style="color: #464646;"><br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">CREATE SEQUENCE </span><span style="color: #464646;">序列号的名称</span><span style="color: #464646;"> (</span><span style="color: #464646;">最好是表名</span><span style="color: #464646;">+</span><span style="color: #464646;">序列号</span><span style="color: #464646;">标记</span><span style="color: #464646;">) INCREMENT BY 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; START&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WITH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 MAXVALUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 99999&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CYCLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOCACHE;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">其中最大的</span><span style="color: #464646;">值</span><span style="color: #464646;">按字段的</span><span style="color: #464646;">长</span><span style="color: #464646;">度来定</span><span style="color: #464646;">, </span><span style="color: #464646;">如果定</span><span style="color: #464646;">义</span><span style="color: #464646;">的自</span><span style="color: #464646;">动</span><span style="color: #464646;">增</span><span style="color: #464646;">长</span><span style="color: #464646;">的序列号</span><span style="color: #464646;"> NUMBER(6) , </span><span style="color: #464646;">最大</span><span style="color: #464646;">值为</span><span style="color: #464646;">999999<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INSERT </span><span style="color: #464646;">语</span><span style="color: #464646;">句插入</span><span style="color: #464646;">这</span><span style="color: #464646;">个字段</span><span style="color: #464646;">值为</span><span style="color: #464646;">: </span><span style="color: #464646;">序列号的名称</span><span style="color: #464646;">.NEXTVAL<br><br><strong><span>2. </span></strong></span><strong><span style="color: #464646;">单</span></strong><strong><span style="color: #464646;">引号的</span></strong><strong><span style="color: #464646;"><span style="color: #3366ff;"><span>处</span></span><span style="color: #3366ff;"><span>理</span></span></span></strong><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL</span><span style="color: #464646;">里可以用双引号包起字符串，</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">里只可以用</span><span style="color: #464646;">单</span><span style="color: #464646;">引号包起字符串。</span><span style="color: #464646;">在插入和修改字符串前必</span><span style="color: #464646;">须</span><span style="color: #464646;">做</span><span style="color: #464646;">单</span><span style="color: #464646;">引号的替</span><span style="color: #464646;">换</span><span style="color: #464646;">：把所有出</span><span style="color: #464646;">现</span><span style="color: #464646;">的一个</span><span style="color: #464646;">单</span><span style="color: #464646;">引号替</span><span style="color: #464646;">换</span><span style="color: #464646;">成两个</span><span style="color: #464646;">单</span><span style="color: #464646;">引号。</span><span style="color: #464646;"><br><br><strong><span>3.&nbsp;&nbsp;</span></strong></span><strong><span style="color: #464646;">翻</span></strong><strong><span style="color: #464646;">页</span></strong><strong><span style="color: #464646;">的</span></strong><strong><span style="color: #464646;">SQL</span></strong><strong><span style="color: #464646;">语</span></strong><strong><span style="color: #464646;">句的</span></strong><strong><span style="color: #464646;"><span style="color: #3366ff;">处</span><span style="color: #3366ff;">理</span></span></strong><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL</span><span style="color: #464646;"><span style="color: #3366ff;">处</span><span style="color: #3366ff;">理</span></span><span style="color: #464646;">翻</span><span style="color: #464646;">页</span><span style="color: #464646;">的</span><span style="color: #464646;">SQL</span><span style="color: #464646;">语</span><span style="color: #464646;">句比</span><span style="color: #464646;">较简单</span><span style="color: #464646;">，用</span><span style="color: #464646;">LIMIT </span><span style="color: #464646;">开</span><span style="color: #464646;">始位置</span><span style="color: #464646;">, </span><span style="color: #464646;">记录</span><span style="color: #464646;">个数；</span><span style="color: #464646;">PHP</span><span style="color: #464646;">里</span><span style="color: #464646;">还</span><span style="color: #464646;">可以用</span><span style="color: #464646;">SEEK</span><span style="color: #464646;">定位到</span><span style="color: #464646;">结</span><span style="color: #464646;">果集的位置。</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;"><span style="color: #3366ff;">处</span><span style="color: #3366ff;">理</span></span><span style="color: #464646;">翻</span><span style="color: #464646;">页</span><span style="color: #464646;">的</span><span style="color: #464646;">SQL</span><span style="color: #464646;">语</span><span style="color: #464646;">句就比</span><span style="color: #464646;">较</span><span style="color: #464646;">繁</span><span style="color: #464646;">琐</span><span style="color: #464646;">了。</span><span style="color: #464646;">每</span><span style="color: #464646;">个</span><span style="color: #464646;">结</span><span style="color: #464646;">果集只有一个</span><span style="color: #464646;">ROWNUM</span><span style="color: #464646;">字段</span><span style="color: #464646;">标</span><span style="color: #464646;">明它的位置</span><span style="color: #464646;">, </span><span style="color: #464646;">并且只能用</span><span style="color: #464646;">ROWNUM&lt;100, </span><span style="color: #464646;">不能用</span><span style="color: #464646;">ROWNUM&gt;80</span><span style="color: #464646;">。</span><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">以下是</span><span style="color: #464646;">经过</span><span style="color: #464646;">分析后</span><span style="color: #464646;">较</span><span style="color: #464646;">好的两</span><span style="color: #464646;">种</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">翻</span><span style="color: #464646;">页</span><span style="color: #464646;">SQL</span><span style="color: #464646;">语</span><span style="color: #464646;">句</span><span style="color: #464646;">( ID</span><span style="color: #464646;">是唯一</span><span style="color: #464646;">关键</span><span style="color: #464646;">字的字段名</span><span style="color: #464646;"> )</span><span style="color: #464646;">：</span><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">语</span><span style="color: #464646;">句一：</span><span style="color: #464646;"><br></span><span style="color: #464646;"></span><span style="color: #464646;">语</span><span style="color: #464646;">句二：</span><span style="color: #464646;"><br></span><span style="color: #464646;"><br></span></p>
+<div style="width: 409px; height: 316px;" class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><div><!--<br /><br />Code highlighting produced by Actipro CodeHighlighter (freeware)<br />http://www.CodeHighlighter.com/<br /><br />--><span style="color: #0000ff;">SELECT</span><span style="color: #000000;"> ID, </span><span style="color: #ff0000;">[</span><span style="color: #ff0000;">FIELD_NAME,...</span><span style="color: #ff0000;">]</span><span style="color: #000000;"> <br></span><span style="color: #0000ff;">FROM</span><span style="color: #000000;"> TABLE_NAME <br></span><span style="color: #0000ff;">WHERE</span><span style="color: #000000;"> ID </span><span style="color: #808080;">IN</span><span style="color: #000000;"> ( </span></div><div><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">　　SELECT</span><span style="color: #000000;"> ID </span></div><div><span style="color: #000000;">&nbsp;</span><span style="color: #0000ff;">FROM</span><span style="color: #000000;"> (</span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">　　　　SELECT</span><span style="color: #000000;"> ROWNUM </span><span style="color: #0000ff;">AS</span><span style="color: #000000;"> NUMROW, ID </span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">　　　　FROM</span><span style="color: #000000;"> TABLE_NAME </span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">　　　　WHERE</span><span style="color: #000000;"> 条件1 </span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">　　　　ORDER</span><span style="color: #000000;"> </span><span style="color: #0000ff;">BY</span><span style="color: #000000;"> 条件2) </span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">WHERE</span><span style="color: #000000;"> NUMROW </span><span style="color: #808080;">&gt;</span><span style="color: #000000;"> </span><span style="color: #800000; font-weight: bold;">80</span><span style="color: #000000;"> </span><span style="color: #808080;">AND</span><span style="color: #000000;"> NUMROW </span><span style="color: #808080;">&lt;</span><span style="color: #000000;"> </span><span style="color: #800000; font-weight: bold;">100</span><span style="color: #000000;"> ) </span></div><div><span style="color: #000000;"></span><span style="color: #0000ff;">ORDER</span><span style="color: #000000;"> </span><span style="color: #0000ff;">BY</span><span style="color: #000000;"> 条件3;</span></div></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p style="margin: 0mm 0mm 0pt; text-indent: 21pt;">&nbsp;</p>
+<p>&nbsp;</p>
+<p style="margin: 0mm 0mm 0pt; text-indent: 21pt;">&nbsp;<br>&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<div><div id="highlighter_816182" class="syntaxhighlighter collapsed nogutter  sql"><div class="toolbar"><span><a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#" class="toolbar_item command_expandSource expandSource">+ View Code</a></span><span><a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="sql plain">&lt;div style=</code><code class="sql string">"width: 667px; height: 157px;"</code> <code class="sql plain">class=</code><code class="sql string">"cnblogs_code"</code><code class="sql plain">&gt;&lt;div class=</code><code class="sql string">"cnblogs_code_toolbar"</code><code class="sql plain">&gt;&lt;span class=</code><code class="sql string">"cnblogs_code_copy"</code><code class="sql plain">&gt;&lt;a href=</code><code class="sql string">"javascript:void(0);"</code> <code class="sql plain">onclick=</code><code class="sql string">"copyCnblogsCode(this)"</code> <code class="sql plain">title=</code><code class="sql string">"复制代码"</code><code class="sql plain">&gt;&lt;img src=</code><code class="sql string">"//common.cnblogs.com/images/copycode.gif"</code> <code class="sql plain">alt=</code><code class="sql string">"复制代码"</code><code class="sql plain">&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;pre&gt;&lt;div&gt;&lt;!</code><code class="sql comments">--&lt;br /&gt;&lt;br /&gt;Code highlighting produced by Actipro CodeHighlighter (freeware)&lt;br /&gt;http://www.CodeHighlighter.com/&lt;br /&gt;&lt;br /&gt;--&gt;&lt;span style="color: #0000ff;"&gt;SELECT&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #808080;"&gt;*&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;FROM&lt;/span&gt;&lt;span style="color: #000000;"&gt; (( &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;SELECT&lt;/span&gt;&lt;span style="color: #000000;"&gt; ROWNUM &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;AS&lt;/span&gt;&lt;span style="color: #000000;"&gt; NUMROW, c.&lt;/span&gt;&lt;span style="color: #808080;"&gt;*&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;from&lt;/span&gt;&lt;span style="color: #000000;"&gt; (&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;select&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #ff0000;"&gt;[&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;FIELD_NAME,...&lt;/span&gt;&lt;span style="color: #ff0000;"&gt;]&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style="color: #000000;"&gt;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;FROM&lt;/span&gt;&lt;span style="color: #000000;"&gt; TABLE_NAME &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;WHERE&lt;/span&gt;&lt;span style="color: #000000;"&gt; 条件1 &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;ORDER&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;BY&lt;/span&gt;&lt;span style="color: #000000;"&gt; 条件2) c) &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style="color: #000000;"&gt;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;WHERE&lt;/span&gt;&lt;span style="color: #000000;"&gt; NUMROW &lt;/span&gt;&lt;span style="color: #808080;"&gt;&gt;&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000; font-weight: bold;"&gt;80&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #808080;"&gt;AND&lt;/span&gt;&lt;span style="color: #000000;"&gt; NUMROW &lt;/span&gt;&lt;span style="color: #808080;"&gt;&lt;&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #800000; font-weight: bold;"&gt;100&lt;/span&gt;&lt;span style="color: #000000;"&gt; ) &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style="color: #000000;"&gt;&lt;/span&gt;&lt;span style="color: #0000ff;"&gt;ORDER&lt;/span&gt;&lt;span style="color: #000000;"&gt; &lt;/span&gt;&lt;span style="color: #0000ff;"&gt;BY&lt;/span&gt;&lt;span style="color: #000000;"&gt; 条件3;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;</code></div><div class="line number2 index1 alt1"><code class="sql plain">&lt;div class=</code><code class="sql string">"cnblogs_code_toolbar"</code><code class="sql plain">&gt;&lt;span class=</code><code class="sql string">"cnblogs_code_copy"</code><code class="sql plain">&gt;&lt;a href=</code><code class="sql string">"javascript:void(0);"</code> <code class="sql plain">onclick=</code><code class="sql string">"copyCnblogsCode(this)"</code> <code class="sql plain">title=</code><code class="sql string">"复制代码"</code><code class="sql plain">&gt;&lt;img src=</code><code class="sql string">"//common.cnblogs.com/images/copycode.gif"</code> <code class="sql plain">alt=</code><code class="sql string">"复制代码"</code><code class="sql plain">&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p><span><strong><span style="color: #464646;"><span style="font-size: 15pt; color: #0e59c0;"></span><span><span style="color: #464646;"><span><strong>4． 长字符串的</strong><strong><span style="color: #3366ff;"><span>处</span></span><span style="color: #3366ff;"><span>理</span></span></strong></span><span style="color: #464646;"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">长</span><span style="color: #464646;">字符串的</span><span style="color: #464646;"><span style="color: #3366ff;"><span>处</span></span><span style="color: #3366ff;"><span>理</span></span>ORACLE</span><span style="color: #464646;">也有它特殊的地方。</span><span style="color: #464646;">INSERT</span><span style="color: #464646;">和</span><span style="color: #464646;">UPDATE</span><span style="color: #464646;">时</span><span style="color: #464646;">最大可操作的字符串</span><span style="color: #464646;">长</span><span style="color: #464646;">度小于等于</span><span style="color: #464646;">4000</span><span style="color: #464646;">个</span><span style="color: #464646;">单</span><span style="color: #464646;">字</span><span style="color: #464646;">节</span><span style="color: #464646;">, </span><span style="color: #464646;">如果要插入更</span><span style="color: #464646;">长</span><span style="color: #464646;">的字符串</span><span style="color: #464646;">, </span><span style="color: #464646;">请</span><span style="color: #464646;">考</span><span style="color: #464646;">虑</span><span style="color: #464646;">字段用</span><span style="color: #464646;">CLOB</span><span style="color: #464646;">类</span><span style="color: #464646;">型，方法借用</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">里自</span><span style="color: #464646;">带</span><span style="color: #464646;">的</span><span style="color: #464646;">DBMS_LOB</span><span style="color: #464646;">程序包。</span><span style="color: #464646;">插入修改</span><span style="color: #464646;">记录</span><span style="color: #464646;">前一定要做</span><span style="color: #464646;">进</span><span style="color: #464646;">行非空和</span><span style="color: #464646;">长</span><span style="color: #464646;">度判断，不能</span><span style="color: #464646;">为</span><span style="color: #464646;">空的字段</span><span style="color: #464646;">值</span><span style="color: #464646;">和超出</span><span style="color: #464646;">长</span><span style="color: #464646;">度字段</span><span style="color: #464646;">值</span><span style="color: #464646;">都</span><span style="color: #464646;">应该</span><span style="color: #464646;">提出警告</span><span style="color: #464646;">,</span><span style="color: #464646;">返回上次操作。</span><span><br><br><strong>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 日期字段的</strong><strong><span style="color: #3366ff;"><span>处</span></span><span style="color: #3366ff;"><span>理</span></span></strong></span><span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL日期字段分</span><span style="color: #464646;">DATE</span><span style="color: #464646;">和</span><span style="color: #464646;">TIME</span><span style="color: #464646;">两</span><span style="color: #464646;">种</span><span style="color: #464646;">，</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">日期字段只有</span><span style="color: #464646;">DATE</span><span style="color: #464646;">，包含年月日</span><span style="color: #464646;">时</span><span style="color: #464646;">分秒信息，用当前</span><span style="color: #464646;"><a href="http://www.netbei.com/Article/db/Index.html"><span style="color: #3366ff;"><span>数据</span></span><span style="color: #3366ff;"><span>库</span></span></a></span><span style="color: #464646;">的系</span><span style="color: #464646;">统时间为</span><span style="color: #464646;">SYSDATE, </span><span style="color: #464646;">精确到秒，或者用字符串</span><span style="color: #464646;">转换</span><span style="color: #464646;">成日期型函数</span><span style="color: #464646;">TO_DATE(‘&lt;st1:chsdate isrocdate="False" islunardate="False" day="1" month="8" year="2001"&gt;2001-08-01&lt;/st1:chsdate&gt;’,’YYYY-MM-DD’)</span><span style="color: #464646;">年</span><span style="color: #464646;">-</span><span style="color: #464646;">月</span><span style="color: #464646;">-</span><span style="color: #464646;">日</span><span style="color: #464646;"> 24</span><span style="color: #464646;">小</span><span style="color: #464646;">时</span><span style="color: #464646;">:</span><span style="color: #464646;">分</span><span style="color: #464646;">钟</span><span style="color: #464646;">:</span><span style="color: #464646;">秒</span><span style="color: #464646;"> </span><span style="color: #464646;">的格式</span><span style="color: #464646;">YYYY-MM-DD HH24:MI:SS TO_DATE()</span><span style="color: #464646;">还</span><span style="color: #464646;">有很多</span><span style="color: #464646;">种</span><span style="color: #464646;">日期格式</span><span style="color: #464646;">, </span><span style="color: #464646;">可以参看</span><span style="color: #464646;">ORACLE DOC.</span><span style="color: #464646;">日期型字段</span><span style="color: #464646;">转换</span><span>成字符串函数TO_CHAR(‘&lt;st1:chsdate isrocdate="False" islunardate="False" day="1" month="8" year="2001"&gt;2001-08-01&lt;/st1:chsdate&gt;’,’YYYY-MM-DD HH24:MI:SS’)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #464646;">日期字段的数学运算公式有很大的不同。</span><span style="color: #464646;">MYSQL</span><span style="color: #464646;">找到离当前</span><span style="color: #464646;">时间</span><span style="color: #464646;">7</span><span style="color: #464646;">天用</span><span style="color: #464646;"> DATE_FIELD_NAME &gt; SUBDATE</span><span style="color: #464646;">（</span><span style="color: #464646;">NOW</span><span style="color: #464646;">（），</span><span style="color: #464646;">INTERVAL 7 DAY</span><span style="color: #464646;">）</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">找到离当前</span><span style="color: #464646;">时间</span><span style="color: #464646;">7</span><span>天用 DATE_FIELD_NAME &gt;SYSDATE - 7;<br><br><strong><span>6.&nbsp;&nbsp;</span>空字符的</strong><strong><span style="color: #3366ff;">处</span><span style="color: #3366ff;">理</span></strong></span><span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL的非空字段也有空的内容，</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">里定</span><span style="color: #464646;">义</span><span style="color: #464646;">了非空字段就不容</span><span style="color: #464646;">许</span><span style="color: #464646;">有空的内容。按</span><span style="color: #464646;">MYSQL</span><span style="color: #464646;">的</span><span style="color: #464646;">NOT NULL</span><span style="color: #464646;">来定</span><span style="color: #464646;">义</span><span style="color: #464646;">ORACLE</span><span style="color: #464646;">表</span><span style="color: #464646;">结</span><span style="color: #464646;">构</span><span style="color: #464646;">, </span><span style="color: #464646;">导</span><span style="color: #464646;">数据</span><span style="color: #464646;">的</span><span style="color: #464646;">时</span><span style="color: #464646;">候会</span><span style="color: #464646;">产</span><span style="color: #464646;">生</span><span style="color: #464646;">错误</span><span style="color: #464646;">。因此</span><span style="color: #464646;">导</span><span style="color: #464646;">数据</span><span style="color: #464646;">时</span><span style="color: #464646;">要</span><span style="color: #464646;">对</span><span style="color: #464646;">空字符</span><span style="color: #464646;">进</span><span style="color: #464646;">行判断，如果</span><span style="color: #464646;">为</span><span style="color: #464646;">NULL</span><span>或空字符，需要把它改成一个空格的字符串。<br><br><strong>7. 字符串的模糊比较</strong></span><span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MYSQL里用</span><span style="color: #464646;"> </span><span style="color: #464646;">字段名</span><span style="color: #464646;"> like '%</span><span style="color: #464646;">字符串</span><span style="color: #464646;">%',ORACLE</span><span style="color: #464646;">里也可以用</span><span style="color: #464646;"> </span><span style="color: #464646;">字段名</span><span style="color: #464646;"> like '%</span><span style="color: #464646;">字符串</span><span style="color: #464646;">%' </span><span style="color: #464646;">但</span><span style="color: #464646;">这种</span><span style="color: #464646;">方法不能使用索引</span><span style="color: #464646;">, </span><span style="color: #464646;">速度不快，用字符串比</span><span style="color: #464646;">较</span><span style="color: #464646;">函数</span><span style="color: #464646;"> instr(</span><span style="color: #464646;">字段名</span><span style="color: #464646;">,'</span><span style="color: #464646;">字符串</span><span style="color: #464646;">')&gt;0 </span><span style="color: #464646;">会得到更精确的</span><span style="color: #464646;">查</span><span style="color: #464646;">找</span><span style="color: #464646;">结</span><span>果。<br><br><strong>8. 程序和函数里，操作</strong><strong><span style="color: #3366ff;">数据</span><span style="color: #3366ff;">库</span></strong><strong>的工作完成后请注意结果集和指针的释放。</strong></span></span></span></span></strong></span></p></div><div id="MySignature" style="display: block;"><div id="div_digga" onclick="DiggIt(cb_entryId,cb_blogId,1);" style="position: fixed; right: 20px;bottom: 30px;">                <div class="diggit" style="height: 20px; background-image: none; color: #FFFFFF; background-color: #E33100; border: medium none; font-size: 9pt; font-weight: bold; text-decoration: none; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);">        <span class="diggnum" style="color: #ffffff;font-size: 9pt;">顶</span>             </div>        </div> <div id="div_diggc" style="position: fixed; right: 80px;bottom: 30px;">                <div class="diggit" style="height: 20px; background-image: none; color: #FFFFFF; background-color: #2DAEBF; border: medium none; font-weight: bold; text-decoration: none; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);">        <span class="diggnum"><a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#top" style="color: #FFFFFF;font-size: 9pt;">Top</a></span>             </div>            </div> <div id="div_diggc" style="position: fixed; right: 20px;bottom: 0;" onclick="AddToWz(cb_entryId)">                <div class="diggit" style="height: 20px; background-image: none; color: #FFFFFF; background-color: #FFB515; border: medium none; font-weight: bold; text-decoration: none; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);">        <span class="diggnum" style="color: #FFFFFF;font-size: 9pt;">收藏</span>             </div>            </div> <div id="div_diggb" onclick="my_follow();" style="position: fixed; right: 80px;bottom: 0;">                <div class="diggit" style="height: 20px; background-image: none; color: #FFFFFF; background-color: green; border: medium none; font-weight: bold; text-decoration: none; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);">        <span class="diggnum" style="color: #ffffff;font-size: 9pt;">关注</span>             </div>            </div> <div id="div_diggc" style="position: fixed; right: 140px;bottom: 0;" onclick="$(&#39;#tbCommentBody&#39;).focus();">                <div class="diggit" style="height: 20px; background-image: none; color: #FFFFFF; background-color: #EEEEEE; border: medium none; font-weight: bold; text-decoration: none; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);">        <span class="diggnum" style="color: #FFFFFF;font-size: 9pt;">评论</span>             </div>        </div></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/zhouchaoyi/tag/MySql/">MySql</a>, <a href="http://www.cnblogs.com/zhouchaoyi/tag/Oracle/">Oracle</a>, <a href="http://www.cnblogs.com/zhouchaoyi/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(1727678,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;0bf5b954-8ff4-de11-ba8f-001cf0cd104b&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zhouchaoyi/" target="_blank"><img src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zhouchaoyi/">周超亿</a><br>
+            <a href="http://home.cnblogs.com/u/zhouchaoyi/followees">关注 - 9</a><br>
+            <a href="http://home.cnblogs.com/u/zhouchaoyi/followers">粉丝 - 10</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;0bf5b954-8ff4-de11-ba8f-001cf0cd104b&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(1727678,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">1</span>
+    </div>
+    <div class="buryit" onclick="votePost(1727678,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/05/05/JSGame_llk.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/05/05/JSGame_llk.html" title="发布于2010-05-05 08:54">网页版连连看（JS jQuery）</a><br><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/06/25/1764982.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/06/25/1764982.html" title="发布于2010-06-25 11:07">silverlight网站、第三方控件及开源代码收集</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2010-05-05 09:11</span> <a href="http://www.cnblogs.com/zhouchaoyi/">周超亿</a> 阅读(<span id="post_view_count">7742</span>) 评论(<span id="post_comment_count">0</span>) &nbsp;<a href="https://i.cnblogs.com/EditArticles.aspx?postid=1727678" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#" onclick="AddToWz(1727678);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=70183,cb_entryId=1727678,cb_blogApp=currentBlogApp,cb_blogUserGuid='0bf5b954-8ff4-de11-ba8f-001cf0cd104b',cb_entryCreatedDate='2010/5/5 9:11:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://group.cnblogs.com/topic/76017.html" target="_blank">【活动】一元专享1500元微软智能云Azure</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block">     <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-4210569241504288" data-ad-slot="5457903683" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/saved_resource.html"></iframe></ins></ins></ins></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/562907/" target="_blank">VS Code 1.9扩展了任务、改进了Markdown的支持和终端性能</a><br> ·  <a href="http://news.cnblogs.com/n/562951/" target="_blank">Airbnb坐拥30亿美元现金 将借收购与结盟扩展产品线</a><br> ·  <a href="http://news.cnblogs.com/n/562950/" target="_blank">越狱刷榜都过时了，中国特色苹果“助手”正侵蚀iOS 35%收入</a><br> ·  <a href="http://news.cnblogs.com/n/562949/" target="_blank">贾跃亭提议高送转引巨量博弈 乐视影业估值缩水</a><br> ·  <a href="http://news.cnblogs.com/n/562948/" target="_blank">MWC诺基亚要发4款廉价机 彩蛋是复刻版3310</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="ad_c2" class="c_ad_block"><a href="http://bbs.h3bpm.com/index.php?m=app&amp;app=product_download&amp;a=reg&amp;utm_source=csdn&amp;utm_medium=pic&amp;utm_campaign=show&amp;utm_content=v10&amp;utm_term=%E5%85%8D%E8%B4%B9%E4%B8%8B%E8%BD%BD" target="_blank"><img width="468" height="60" src="./MYSQL和ORACLE的一些区别 - 周超亿 - 博客园_files/24442-20170118152220281-363324784.jpg" alt=""></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/554260/" target="_blank">「代码家」的学习过程和学习经验分享</a><br> ·  <a href="http://kb.cnblogs.com/page/556770/" target="_blank">写给未来的程序媛</a><br> ·  <a href="http://kb.cnblogs.com/page/558087/" target="_blank">高质量的工程代码为什么难写</a><br> ·  <a href="http://kb.cnblogs.com/page/555750/" target="_blank">循序渐进地代码重构</a><br> ·  <a href="http://kb.cnblogs.com/page/554496/" target="_blank">技术的正宗与野路子</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/zhouchaoyi/">周超亿</a><br>园龄：<a href="http://home.cnblogs.com/u/zhouchaoyi/" title="入园时间：2009-12-29">7年1个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/zhouchaoyi/followers/">10</a><br>关注：<a href="http://home.cnblogs.com/u/zhouchaoyi/followees/">9</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;0bf5b954-8ff4-de11-ba8f-001cf0cd104b&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/01/01&#39;);return false;">&lt;</a></td><td align="center">2017年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/03/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td class="CalWeekendDay" align="center">4</td></tr><tr><td class="CalWeekendDay" align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td class="CalWeekendDay" align="center">11</td></tr><tr><td class="CalWeekendDay" align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalTodayDay" align="center">15</td><td align="center">16</td><td align="center">17</td><td class="CalWeekendDay" align="center">18</td></tr><tr><td class="CalWeekendDay" align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td class="CalWeekendDay" align="center">25</td></tr><tr><td class="CalWeekendDay" align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr><tr><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td><td class="CalOtherMonthDay" align="center">11</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/zhouchaoyi/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="http://www.cnblogs.com/zhouchaoyi/articles/1727678.html#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/zhouchaoyi/tag/Flex/">Flex</a>(7)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/FMS/">FMS</a>(6)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/Flash/">Flash</a>(6)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/JS/">JS</a>(5)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/Jquery/">Jquery</a>(2)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/">浏览器兼容</a>(2)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>(2)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/SQLServer/">SQLServer</a>(2)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/SSIS/">SSIS</a>(1)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/%E5%A4%9A%E4%BA%BA%E5%9C%A8%E7%BA%BF%E8%A7%86%E9%A2%91%E8%81%8A%E5%A4%A9/">多人在线视频聊天</a>(1)</li><li><a href="http://www.cnblogs.com/zhouchaoyi/tag/">更多</a></li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(27)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/zhouchaoyi/archive/2012/04.html">2012年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03.html">2012年3月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/zhouchaoyi/archive/2012/01.html">2012年1月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/zhouchaoyi/archive/2011/09.html">2011年9月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/zhouchaoyi/archive/2011/06.html">2011年6月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/zhouchaoyi/archive/2011/05.html">2011年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/zhouchaoyi/archive/2010/09.html">2010年9月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/zhouchaoyi/archive/2010/08.html">2010年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/zhouchaoyi/archive/2010/06.html">2010年6月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/zhouchaoyi/archive/2010/05.html">2010年5月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/zhouchaoyi/archive/2010/04.html">2010年4月 (8)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListArticleCategory">
+<h3 class="catListTitle">文章分类<span style="font-size:11px;font-weight:normal">(23)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/zhouchaoyi/category/246325.html">.Net(3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/zhouchaoyi/category/248723.html">Asp.net(5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/zhouchaoyi/category/248722.html">c#(3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/zhouchaoyi/category/248724.html">Flex(1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/zhouchaoyi/category/249071.html">FMS(7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/zhouchaoyi/category/248725.html">MySql</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/zhouchaoyi/category/244341.html">数据库(4)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html#2618177">1. Re:解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题</a></li>
+        <li class="recent_comment_body">好用，谢谢</li>
+        <li class="recent_comment_author">--张老旦</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html#2576234">2. Re:解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题</a></li>
+        <li class="recent_comment_body">@袁家小黑球我这边成功了你第一步成功生成视图了吗...</li>
+        <li class="recent_comment_author">--云寂</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/20/2408137.html#2491569">3. Re:IE、firefox下怎样获得自定义属性的值</a></li>
+        <li class="recent_comment_body">你试过了IE6下，行么？</li>
+        <li class="recent_comment_author">--江面飘雪</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html#2456075">4. Re:解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题</a></li>
+        <li class="recent_comment_body">不知道博主有没有试过最后2段代码，我这边原样复制，但是不能执行，求解~~</li>
+        <li class="recent_comment_author">--袁家小黑球</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/04/28/1728368.html#2394209">5. Re:jquery+ashx无刷新GridView数据显示插件(实现分页、排序、过滤功能)</a></li>
+        <li class="recent_comment_body">下载链接失效了。</li>
+        <li class="recent_comment_author">--Vincent______L</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2011/06/26/2090961.html">1. SQL Server 2005使用作业实现定时备份任务和删除指定天数前的备份文件(3955)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/09/16/1827973.html">2. jquery 父窗口 子窗口 相关操作(3947)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html">3. 解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题(3760)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/09/16/1828458.html">4. JS重写方法(1770)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/30/2424566.html">5. 关于IE文档模式的指定(1409)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2011/06/26/2090961.html">1. SQL Server 2005使用作业实现定时备份任务和删除指定天数前的备份文件(7)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/05/05/JSGame_llk.html">2. 网页版连连看（JS jQuery）(4)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html">3. 解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题(3)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/04/28/1728368.html">4. jquery+ashx无刷新GridView数据显示插件(实现分页、排序、过滤功能)(1)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/06/25/1764982.html">5. silverlight网站、第三方控件及开源代码收集(1)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2011/06/26/2090961.html">1. SQL Server 2005使用作业实现定时备份任务和删除指定天数前的备份文件(3)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/29/2423582.html">2. 浏览器模式与文档模式区别(3)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/06/25/1764982.html">3. silverlight网站、第三方控件及开源代码收集(2)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2012/03/07/2383509.html">4. 解决PowerDesigner 16 Generate Datebase For Sql2005/2008 对象名sysproperties无效的问题(2)</a></li><li><a href="http://www.cnblogs.com/zhouchaoyi/archive/2010/04/27/1728372.html">5. 开发人员非常实用的站点(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 周超亿
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+<!--PageEndHtml Block Begin-->
+<!--<div style="width:220px; height:250px; z-index:9999"><div style="position:absolute; z-index:9999">
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+id="Index" width="220" height="250"
+codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+<param name="movie" value="http://www.flextheworld.com/callme/Index.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="flashVars" value="callme=282121434&nameColor=#000000" />
+<embed src="http://www.flextheworld.com/callme/Index.swf" quality="high" bgcolor="#ffffff"
+   width="220" height="250" name="Index" align="middle"
+   play="true"
+   loop="false"
+   quality="high"
+   allowScriptAccess="sameDomain"
+  type="application/x-shockwave-flash"
+   flashVars="callme=282121434&nameColor=#000000"
+   pluginspage="http://www.adobe.com/go/getflashplayer">
+</embed>
+</object>
+</div></div>-->
+<!--PageEndHtml Block End-->
+
+
+</body></html>

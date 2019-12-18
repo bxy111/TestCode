@@ -1,0 +1,223 @@
+create or replace package studentManage
+is
+       procedure proc1(p_collegeid number);
+       procedure proc2(p_collegeid number);
+       procedure autoproc(will_number number);
+       procedure show_score(p_stuid number);
+       procedure show_result(p_stuid number);
+       procedure get_students(p_stuid number);
+       procedure student_list(p_collegeid number);
+       procedure college_total;
+       procedure clear_status;
+end;
+
+create or replace package body studentManage
+is
+       procedure proc1(p_collegeid number) is
+         var_num number := 0;
+       begin
+         for v_emp in (select stuid from (select s.stuid , e.plan_total from college e,score s,mat m 
+             where m.mat_flag = 0 and s.stuid = m.stuid and m.first_will = e.collegeid
+             and e.collegeid = p_collegeid and (chinese+english+english+complex) >= e.grade
+             order by (chinese+english+math+complex) desc) where rownum <= plan_total) loop
+           update mat set mat_flag=1,mat_collegeid=p_collegeid,mat_will_flag=1 where mat.stuid=v_emp.stuid;
+           var_num := var_num + 1;
+         end loop;
+         update college set actual_total=actual_total+var_num where collegeid = p_collegeid; 
+       end;
+       
+       procedure proc2(p_collegeid number) is
+         var_num number := 0;
+       begin
+         for v_emp in (select stuid from (select s.stuid , e.plan_total, e.actual_total from college e,score s,mat m where m.mat_flag = 0 and s.stuid = m.stuid and m.second_will = e.collegeid
+             and e.collegeid = p_collegeid and (chinese+english+english+complex) >= e.grade
+             order by (chinese+english+math+complex) desc) where rownum <= (plan_total - actual_total)) loop
+           update mat set mat_flag=1,mat_collegeid=p_collegeid,mat_will_flag=2 where mat.stuid=v_emp.stuid;
+           var_num := var_num + 1;
+         end loop;
+         update college set actual_total=actual_total+var_num where collegeid = p_collegeid; 
+       end;
+       
+       procedure autoproc(will_number number) is
+       begin
+         for v_collegeid in (select collegeid from college) loop
+           if will_number = 1 then
+             proc1(v_collegeid.collegeid);
+           else
+             proc2(v_collegeid.collegeid);
+           end if;
+         end loop;
+       end;
+       
+       procedure show_score(p_stuid number) is
+       begin
+         for v_info in (select tmp.name, tmp.总分, tmp.chinese, tmp.english, tmp.math, tmp.complex, tmp.first_will, 
+           c1.name firstwillname, tmp.second_will, c2.name secondwillname 
+           from (select s.name,(chinese+english+math+complex) 总分, chinese, english, math, complex, 
+           m.first_will, m.second_will from student s, mat m, score 
+           where s.stuid=p_stuid and s.stuid=m.stuid and score.stuid=s.stuid) tmp, college c1, college c2 
+           where c1.collegeid=tmp.first_will and  c2.collegeid=tmp.second_will) loop
+           dbms_output.put_line(v_info.name);
+           dbms_output.put_line(v_info.总分);
+           dbms_output.put_line(v_info.chinese);
+           dbms_output.put_line(v_info.english);
+           dbms_output.put_line(v_info.math);
+           dbms_output.put_line(v_info.complex);
+           dbms_output.put_line(v_info.first_will);
+           dbms_output.put_line(v_info.firstwillname);
+           dbms_output.put_line(v_info.second_will);
+           dbms_output.put_line(v_info.secondwillname);
+         end loop;
+       end;
+       
+       procedure show_result(p_stuid number) is
+       begin
+         for v_info in (select (chinese+english+math+complex) 总分, chinese, english,
+            math, complex, mat_collegeid, mat_will_flag, case m.mat_flag when 0 then '未录取' when 1 then '已录取' end
+            录取结果, c.name from mat m, score s, college c
+           where s.stuid=p_stuid and m.stuid = s.stuid and c.collegeid=m.mat_collegeid) loop
+           dbms_output.put_line(v_info.总分);
+           dbms_output.put_line(v_info.chinese);
+           dbms_output.put_line(v_info.english);
+           dbms_output.put_line(v_info.math);
+           dbms_output.put_line(v_info.complex);
+           dbms_output.put_line(v_info.mat_collegeid);
+           dbms_output.put_line(v_info.name);
+           dbms_output.put_line(v_info.mat_will_flag);
+           dbms_output.put_line(v_info.录取结果);
+         end loop;
+       end;
+       
+       procedure get_students(p_stuid number) is
+       begin
+         for v_info in (select tmp.stuid, (chinese+english+math+complex) 总分, chinese, english,math, complex, 
+           tmp.mat_will_flag from score,(select m2.stuid,m2.mat_will_flag from mat m1, mat m2 
+           where m1.stuid=p_stuid and m1.mat_collegeid = m2.mat_collegeid) tmp where tmp.stuid = score.stuid and
+           (chinese+english+math+complex) > (select chinese+english+math+complex from score where stuid=p_stuid)) loop
+           dbms_output.put_line(v_info.stuid);
+           dbms_output.put_line(v_info.总分);
+           dbms_output.put_line(v_info.chinese);
+           dbms_output.put_line(v_info.english);
+           dbms_output.put_line(v_info.math);
+           dbms_output.put_line(v_info.complex);
+           dbms_output.put_line(v_info.mat_will_flag);
+           dbms_output.put_line('-----------------------------------');
+         end loop;
+       end;
+
+       procedure student_list(p_collegeid number) is
+       begin
+         for v_info in (select score.stuid, mat_will_flag 志愿, (chinese+english+math+complex) 总分, tmp.录取平均分,
+             chinese, english,math, complex
+             from mat,score,(select avg(chinese+english+math+complex) 录取平均分
+             from mat,score where mat_collegeid=p_collegeid and mat.stuid=score.stuid) tmp where mat_collegeid=p_collegeid and 
+             mat.stuid=score.stuid order by (chinese+english+math+complex) desc) loop
+           dbms_output.put_line(v_info.stuid);
+           dbms_output.put_line(v_info.志愿);
+           dbms_output.put_line(v_info.总分);
+           dbms_output.put_line(v_info.录取平均分);
+           dbms_output.put_line(v_info.chinese);
+           dbms_output.put_line(v_info.english);
+           dbms_output.put_line(v_info.math);
+           dbms_output.put_line(v_info.complex);
+           dbms_output.put_line('-----------------------------------');
+         end loop;
+       end;
+       
+       /*按照院校的平均录取分数排序所有院校，统计各院校的最高分数、最低分数，招生人数、
+       录取人数、男生人数、女生人数等信息。*/
+       procedure college_total is
+       begin
+         for v_info in (select tmp2.collegeid, max(chinese+english+math+complex) maxScore, min(chinese+english+math+complex) minScore,
+             max(plan_total) 招生人数, max(actual_total) 录取人数, count(decode(sex, 0, 1, null)) 男生数量, 
+             count(decode(sex, 1, 1, null)) 女生数量
+             from (select college.collegeid, college.plan_total, college.actual_total, 
+             student.stuid, sex, chinese,english,math,complex
+             from (select college.collegeid, mat.stuid from college left join mat on college.collegeid = mat.mat_collegeid) tmp1
+             left join student on student.stuid = tmp1.stuid
+             left join score on score.stuid=tmp1.stuid
+             left join college on college.collegeid = tmp1.collegeid
+             order by college.collegeid) tmp2 group by tmp2.collegeid order by avg(chinese+english+math+complex) desc) loop
+           dbms_output.put_line(v_info.collegeid);
+           dbms_output.put_line(v_info.maxscore);
+           dbms_output.put_line(v_info.minscore);
+           dbms_output.put_line(v_info.招生人数);
+           dbms_output.put_line(v_info.录取人数);
+           dbms_output.put_line(v_info.男生数量);
+           dbms_output.put_line(v_info.女生数量);
+           dbms_output.put_line('-----------------------------------');
+         end loop;
+       end;
+       
+       /*清空par_collage表的录取人数；
+       设置stu_mat学生录取情况表所有考生的录取状态为0(未录
+       取)，录取院校为空，录取志愿为空，录取日期为空，操作人为空。
+       */
+       procedure clear_status is
+       begin
+         update mat set mat_flag=0,mat_will_flag=null, mat_collegeid=null;
+         update college set actual_total=0;
+       end;
+end;
+
+CREATE TABLE logs(
+    LOG_ID NUMBER(10) PRIMARY KEY,
+    LOG_DML VARCHAR2(10),
+    LOG_KEY_ID  NUMBER(30),
+    LOG_OLDSCORE varchar2(50),
+    log_NEWSCORE varchar2(50),
+    LOG_DATE DATE,
+    LOG_USER VARCHAR2(15)
+);
+
+create or replace trigger tri_score
+before update or delete or insert
+on score
+for each row
+declare
+    var_operation varchar2(16);
+    var_user varchar2(32);
+    var_keyid number(30);
+begin
+  case 
+    when inserting then
+         var_operation := '新增';
+         var_keyid := :new.stuid;
+    when updating then
+         var_operation := '修改';
+         var_keyid := :new.stuid;
+    when deleting then
+         var_operation := '删除';
+         var_keyid := :old.stuid;
+   end case;
+   for v_user in (select user from dual) loop
+       var_user:=v_user.user;
+   end loop;
+   insert into logs(log_dml,log_key_id,log_oldscore, log_newscore,log_date,log_user) 
+   values(var_operation, var_keyid, :old.chinese||';'||:old.math||';'||:old.english||';'||:old.complex,
+   :new.chinese||';'||:new.math||';'||:new.english||';'||:new.complex,sysdate, var_user);
+end;
+
+create sequence seq_deptno;
+create or replace trigger tri_logs
+before insert on logs
+for each row
+declare
+begin
+  if :new.log_id is null then
+    :new.log_id := seq_deptno.nextval;
+  end if; 
+end;
+
+/*测试代码*/
+begin
+  studentmanage.college_total;
+end;
+select * from mat;
+select * from college;
+select sysdate from dual;
+update score set english=51 where stuid=1001;
+select * from logs;
+select * from score where stuid=1001;
+delete score where stuid=1001;
+select user from dual;

@@ -1,0 +1,52 @@
+jsp:
+结合html代码和java代码的运行在服务器的实现动态页面技术
+
+java脚本
+1.<% java代码 %>  service()的一部分
+
+2.<%=request.getAttribute() %>  out.print()参数的一部分
+
+3.<%!   %> 编译后的类中作为全局的内容
+
+
+注释： <!-- html注释 -->   //java注释 /**/    <%-- jsp注释 --%>
+
+
+
+三个directive指令
+page : 指定脚本语言和编码格式  导包import errorPage  isErrorPage
+
+
+include : 包含 file=""
+
+
+taglib: 标签库
+
+
+
+四个作用域： setAttribute()  getAttribute()  removeAttribute()
+pageContext: 页面作用域
+request
+session
+application
+
+
+
+九个内嵌变量
+pageContext request session application 
+response
+out
+page
+exception
+config
+
+
+
+
+
+
+
+
+
+
+

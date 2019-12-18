@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="aa.js"></script>
+    <title></title>
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="" id="add" value="新增">
+    <table style="width: 95%;" id="table">
+        <tr>
+            <th>编号</th>
+            <th>标题</th>
+            <th>摘要</th>
+            <th>作者</th>
+            <th>类别</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div style="width: 95%; height: 200px; margin-top:30px; display: none;" id="inputWindow" >
+        <div style="width: 60%; height: 25%; margin: auto;">
+            <form action="">
+                标题:<input type="text" name="" id="textTitle">
+                摘要:<input type="text" name="" id="textAbstract"><br>
+                作者:<input type="text" name="" id="textAuthor">
+                类型:
+                <select name="" id="selectType">
+                    <option value="证券">证券</option>
+                    <option value="计算机">计算机</option>
+                    <option value="经济">经济</option>
+                </select>
+            </form>
+        </div>
+        <div style="width: 32%; height: 10%; margin: auto;">
+            <input type="button" name="" id="" value="保存">
+            <input type="reset" value="重置">
+        </div>
+    </div>
+</body>
+</html>

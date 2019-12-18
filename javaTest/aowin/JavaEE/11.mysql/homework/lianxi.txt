@@ -1,0 +1,49 @@
+-- 使用简单查询语句显示：
+-- select dname from dept;
+-- select ename, (sal+ifnull(comm,0))*12 年收入 from emp;
+-- select distinct deptno from emp where deptno is not null;
+
+-- 限制查询数据显示：
+-- select ename, sal from emp where sal>2850;
+-- select ename, sal from emp where sal not between 1500 and 2850;
+-- select ename, deptno from emp where empno=7566;
+-- select ename, sal from emp where (deptno=10 or deptno=30) and sal>1500;
+-- select ename,job from emp where mgr is null;
+-- select ename,job from emp where comm is null;
+
+-- 使用排序数据的方法显示
+-- select ename,job,hiredate from emp where hiredate between '1981-2-1' and '1981-5-1' order by hiredate;
+-- select ename,sal,comm from emp where comm is not null order by sal desc,comm desc;
+
+-- 使用分组函数和数据分组语句显示
+-- select avg(sal),sum(sal), max(sal),min(sal) from emp;
+-- select job, count(*), avg(sal) from emp group by job;
+-- select count(*) 总员工数, count(comm) 获得补助的员工数 from emp;
+-- select count(distinct mgr) from emp;
+
+-- 使用连接查询方法显示
+-- select dname,ename,sal,job from emp inner join dept on dept.deptno=emp.deptno and dept.deptno=20;
+-- select ename,comm,dname from emp inner join dept on emp.deptno=dept.deptno and comm is not null;
+-- select ename,sal,dname from emp inner join dept on emp.deptno=dept.deptno and dept.loc='DALLAS';
+-- select e2.ename from emp e1,emp e2 where e1.mgr=e2.empno and e1.ename='SCOTT';
+-- select ename, sal, grade from emp inner join salgrade on emp.sal between salgrade.losal and salgrade.hisal and emp.deptno=20;
+-- select ename, dname from emp right join dept on dept.deptno=emp.deptno and dept.deptno = 10;
+-- select ename, dname from emp left join dept on dept.deptno=emp.deptno and dept.deptno = 10;
+
+-- 使用子查询显示：
+-- select ename from emp where deptno=(select deptno from emp where ename='blake') and ename !='blake';
+
+-- select ename, sal, deptno from emp where sal >(select avg(sal) from emp);
+
+-- select ename, sal, deptno from emp, (select deptno tmpdeptno,avg(sal) avgsal from emp group by deptno) tmp where emp.deptno=tmp.tmpdeptno and emp.sal >tmp.avgsal;
+
+-- select ename, sal, comm from emp where sal > (select max(sal) from emp where job=(select job from emp where ename='clark'));
+
+-- select ename, sal, comm from emp, (select sal tmpsal, comm tmpcomm from emp where ename='scott') tmp 
+-- where emp.ename != 'scott' and emp.sal<=>tmp.tmpsal and emp.comm<=>tmp.tmpcomm;
+
+-- select dname, sum(sal) from (select deptno tmpdept from (select deptno, sum(sal) deptsum from emp group by deptno) tmp1, 
+-- (select sum(sal)/3 avgsal from emp) tmp2 where tmp1.deptsum > tmp2.avgsal) tmp3, emp, dept where emp.deptno = tmp3.tmpdept and dept.deptno=tmp3.tmpdept;
+
+
+

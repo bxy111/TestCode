@@ -1,0 +1,36 @@
+-- 第一题
+-- select 8+15/3 from dual;
+-- select 39%12 from dual;
+-- select 17/2 from dual;
+-- 第二题
+-- select 36>27 from dual;
+-- select 15>=8 from dual;
+-- select 40<50 from dual;
+-- select 15<=15 from dual;
+-- select null<=>null from dual;
+-- select null<=1 from dual;
+-- 第三题
+-- select 4&&8 from dual;
+-- select -2||null from dual;
+-- select null xor 0 from dual;
+-- select !2 from dual;
+-- 第四题
+-- select 18 div 5, mod(18,5) from dual;
+-- select pow(9,4) from dual;
+-- select truncate(3.14159,2) from dual;
+-- 第五题
+-- select char_length("hello world"), char_length("university") from dual;
+-- select substring("nice to meet you", 9, 4) from dual;
+-- select repeat("cheer!", 3) from dual;
+-- select reverse("voodoo") from dual;
+-- select case strcmp("mysql", "not") when -1 then "not mysql" when 1 then "mysql not" end from dual;
+-- 第六题
+-- select week(now()) from dual;
+-- select weekday(now())+1 from dual;
+-- select year(now()) - year("1929-02-14") from dual;
+-- select time_to_sec(curtime()) from dual;
+-- 第七题
+-- select conv(100, 10, 16) from dual;
+-- select decode(encode("mysql", "123"), "123") from dual;
+-- 第八题
+-- select rand()*10 div 1, rand()*10 div 1,rand()*10 div 1 from dual;

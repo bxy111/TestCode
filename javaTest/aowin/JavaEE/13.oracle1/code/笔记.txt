@@ -1,0 +1,93 @@
+1.用户系统
+	mysql : 多用户，多个用户可以共用库的
+		用户可以设置权限
+
+	oracle: 多用户 ， 一个库，用户登录成功后看到的表不一样的
+		用户分角色
+			sysdba 系统管理员用户 ，只能本机登录
+				新增用户 给用户分配或者收回权限 删除用户 锁定用户 解锁用户等等操作
+			normal 普通用户
+				操作普通表（自己的开发的应用程序对应的表）
+			
+2. oracle客户端
+	自带的sqlplus
+		直接打开命令行窗口 cmd
+		sqlplus system/123456 as sysdba
+	plsqldeveloper 
+		可视化的客户端工具
+	navicat for oracle
+	
+	
+3. 数据类型
+	3.1 字符串
+		oracle 默认长度是字节长度
+			char 定义时可以不指定长度 默认为1 定长字符 不足的位数使用 空格补齐
+			varchar2(m) 定义时一定要指定长度 变长字符，存储的字符和实际长度有关
+			
+			数字和字母和符号占1个字节、汉字和编码有关 （utf8 3个字节、gbk 2个字节）
+			
+			使用''包括住字符串
+			
+		mysql 默认长度是字符长度
+			char / varchar 变长字符
+			
+			使用'' 或者""都可以包括字符串
+			
+	3.2 数字类型
+		mysql 中有很多的类型，tinyint,smallint,int,float,double,decimal等
+		oracle中较少，有int，double，number      number(m)  number(m,n)
+		number(m)表示m位的整数
+		number(m,n)：m表示数字总位数，n表示小数点后位数
+		
+	3.3 日期类型
+		mysql中有date，time，datetime，timestamp，oracle中有date
+
+4. 分页
+	mysql:
+		select * from table limit m,n （m表示起始位置，n表示取多少条）
+		
+	oracle：
+		借助于rownum来完成分页
+		rownum 是一个伪列 表示对于查询的结果做一个序号
+		
+		select 
+		* from (select emp.*, rownum r from emp where rownum <= pageNum*pageSize)
+		where r >= (pageNum-1)*pageSize + 1
+		
+5. 主键自增
+	mysql
+		表格自带主键自动递增功能
+		insert 语句时，主键不用赋值的 数据库来完成自动递增功能的
+	oracle
+		没有自动递增功能
+		
+		借助于sequence序列对象 来完成主键自增
+		创建序列：
+		create sequence 序列名
+		
+6. 其他
+	6.1 check约束
+	6.2 字符串查询时大小写 
+		mysql中查询条件不区分大小写
+		oracle中查询条件区分大小写
+		
+	6.3 null
+		is null 查询为空的 
+			mysql 中null就是null 空表示空白字符
+			oracle is null 能把为null以及为空的都查到
+			
+	6.4 函数
+		mysql concat(?,?,?,?,...) 多个字符串拼接
+		oracle concat(?,?) 两个字符串拼接 也可以使用双竖线拼接 ?||?||?||...
+	
+	
+	6.5 分支
+		mysql : col = case .. when .. then .. when .. then .. else .. end
+		oracle ：分支函数 decode(col, pval, rval, pval2, rval3, rval4)
+
+	6.6 空值转换
+		mysql： ifnull(col, value)
+		oracle: nvl(col, value) 当col中的值为null或者空时，转换为value的值
+			
+	
+	

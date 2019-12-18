@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>servlet_create</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 配置servlet  映射一个url(访问) -->
+  <!-- 1.注册servlet -->
+  <servlet>
+  	<servlet-name>my</servlet-name><!-- 自定义 -->
+  	<servlet-class>com.aowin.servlet.MyServlet</servlet-class><!-- 完整包名+类名 -->
+  </servlet>
+  <!-- 2.映射url -->
+  <servlet-mapping>
+  	<servlet-name>my</servlet-name><!-- 跟注册的名字一致 -->
+  	<!--  / = http://localhost:8080/servlet_create/
+  		/myServlet = http://localhost:8080/servlet_create/myServlet
+  	  -->
+  	<url-pattern>/myServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- 给第二个servlet映射url -->
+  <!-- 注册 -->
+  <servlet>
+  	<servlet-name>second</servlet-name>
+  	<servlet-class>com.aowin.servlet.SecondServlet</servlet-class>
+  </servlet>
+  <!-- 映射url -->
+  <servlet-mapping>
+  	<servlet-name>second</servlet-name>
+  	<url-pattern>/sec</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 给第三个 servlet配置 -->
+  <servlet>
+  	<servlet-name>third</servlet-name>
+  	<servlet-class>com.aowin.servlet.ThirdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>third</servlet-name>
+  	<url-pattern>/th</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,22 @@
+-- select e_no,e_name,e_salary from employee;
+-- select * from employee where dept_no=10 or dept_no=20;
+-- select * from employee where e_salary between 800 and 2500;
+-- select * from employee where dept_no=20;
+-- select * from employee where e_salary in (select max(e_salary) from employee group by dept_no);
+-- select d_name, d_location from employee,dept where employee.e_name='blake' and employee.dept_no=dept.d_no;
+-- select e_no,d_no,d_name,d_location from employee left join dept on employee.dept_no=dept.d_no order by e_no;
+-- select dept_no,count(*) from employee group by dept_no;
+-- select e_job,sum(e_salary) from employee group by e_job;
+-- select dept_no,avg(e_salary) from employee group by dept_no;
+-- select * from employee where e_salary < 1500;
+-- select * from employee order by dept_no desc,e_salary desc;
+-- select * from employee where e_name regexp '^[AS].*';
+-- select * from employee where curdate()>date_add(hiredate, INTERVAL 10 year);
+-- select timestampdiff(year,hiredate,curdate()) from employee where e_gender='F';
+-- select * from employee limit 2,4;
+-- select min(e_salary) from employee where e_job='salesman';
+-- select e_name,e_job from employee where dept_no in (select d_no from dept where d_location='beijing');
+-- select * from employee left join dept on employee.dept_no=dept.d_no;
+-- select * from employee where hiredate between '2001-1-1' and '2005-12-31' UNION select * from employee where dept_no=20 or dept_no=30;
+-- select * from employee where e_name regexp '[TCM]';
+
