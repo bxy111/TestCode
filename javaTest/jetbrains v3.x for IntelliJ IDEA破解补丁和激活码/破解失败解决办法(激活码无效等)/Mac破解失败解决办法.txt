@@ -1,0 +1,40 @@
+如果下述几个方法都尝试过了，还是无法激活软件，请先卸载，卸载时勾选Delete，然后重启电脑，重新安装，重新配置
+
+
+第一、修改hosts文件，在/etc目录下，将hosts中有关jetbrains的配置行删除
+没有该行内容请忽略，如果没有hosts文件也请忽略。如下所示：
+
+0.0.0.0 account.jetbrains.com（从hosts中删除这行内容，没有请忽略）
+
+0.0.0.0 www.jetbrains.com（从hosts中删除这行内容，没有请忽略）
+
+
+第二、仔细检查确认vmoptions配置文件的jetbrains-key.jar补丁路径是否拼写正确（路径复制，不要手敲），
+确保补丁路径不含有中文！！！确保路径不含有中文！！！确保路径不含有中文！！！
+
+
+第三、仔细检查edit custom vmoptions文件，确保-javaagent前面无空格！！！！否则会导致软件无法打开！！或者无法创建java虚拟机jvm
+
+
+第四、到用户目录，删除软件生成的配置文件（配置文件名称形式：  软件名2019.版本号 软件名2018.版本号）
+如果你安装的是IntelliJIdea
+1、执行命令cd ~/Library/Preferences
+2、执行ls -al | grep IntelliJIdea
+3、将看到的所有形如“软件名2018.版本号”或者形如“软件名2019.版本号”的文件夹删除，如果看到IntelliJIdea2018.2，那么就执行
+rm -rf IntelliJIdea2018.2
+4、执行命令cd ~/Library/Caches,同第3步类似，执行rm -rf IntelliJIdea2018.2
+5、执行命令cd ~/Library/'Application Support'/ 不要去掉引号'  ！同第3步类似，执行rm -rf IntelliJIdea2018.2
+
+如果你安装的是PyCharm
+1、执行命令cd ~/Library/Preferences
+2、执行ls -al | grep PyCharm
+3、将看到的所有形如“软件名2018.版本号”或者形如“软件名2019.版本号”的文件夹删除，如果看到PyCharm2019.3，那么就执行
+rm -rf PyCharm2019.3
+4、执行命令cd ~/Library/Caches,同第3步类似，执行rm -rf PyCharm2019.3
+5、执行命令cd ~/Library/'Application Support'/ 不要去掉引号'  ！同第3步类似，执行rm -rf PyCharm2019.3
+
+其他jetbrains软件请严格参考上述方法进行操作
+
+
+第五、如果动手能力极其极其弱，是个小白的话，可以加我支付页面的客服解决
+
